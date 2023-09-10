@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;500&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: #efefef;
+    min-height: 100vh;
+}
+
+.conteiner {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+nav .menu-icon {
+    cursor: pointer;
+    display: none;
+}
+
+nav .logo {
+    cursor: pointer;
+    padding-top: 5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li {
+    padding: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #d10b0b;
+}
+
+nav ul li a:active {
+    opacity: .5;
+}
+
+nav button {
+    border: none;
+    background-color: #5654b3;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+hr {
+
+    margin-bottom: 20px;
+    margin-left: -180px
+}
+
+main {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+h1,
+b {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: 700px;
+}
+
+.text-bpc {
+    width: 50%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-bpc h1 b {
+    color: #ed0909;
+}
+
+.text-bpc,
+p {
+    font-weight: 300;
+}
+
+.main,
+h2 {
+    font-weight: 300;
+    font-size: larger;
+    margin: 20px 0;
+}
+
+main,
+h3 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.btn-main {
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: none;
+    background-color: #5654b3;
+    color: white;
+    padding: 26px 2px;
+    border-radius: 5px;
+    letter-spacing: .3px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.medias-sociais {
+    background-color: black;
+}
+
+.img-bx {
+    width: 21em;
+    border-radius: 30%;
+}
+
+.local-curso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5em;
+}
+
+.img-mapas {
+    display: flex;
+    margin-top: 1em;
+}
+
+.mapa-curicica {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    border-right: 1px solid;
+}
+
+.mapa-bangu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    margin-left: 1em;
+}
+
+.mapa-curicica,
+.paragraph-contato-curicica {
+    width: 23em;
+}
+
+.mapa-bangu,
+.paragraph-contato-bangu {
+    width: 20em;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    margin-top: 5em;
+    margin-bottom: 1em;
+}
+
+@media (max-width:810px) {
+    .container {}
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    nav .menu-icon {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 60%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        transition: 0.3s ease-in;
+        background-color: rgba(0, 0, 0, 0.13);
+    }
+
+    nav ul:active {
+        transform: translateX(0);
+    }
+
+    nav ul li {
+        padding: 10px;
+    }
+
+    nav ul a {
+        font-size: 18px;
+        color: white;
+    }
+
+    nav ul button {
+        background-color: #ed0909;
+        font-size: 18px;
+        margin: 10px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-bpc, h1 {
+        text-align: center;
+        width: 90%;
+    }
+
+    .text-bpc .btn-main {
+        justify-content: center;
+    }
+    .img-bx{
+        margin-top: 2em;
+        width: 100vw;
+        border-radius: 0;
+    }
+
+    .img-mapas {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .mapa-curicica {
+        padding-bottom: 2em;
+        border-right: none;
+        border-bottom: 1px solid;
+        margin-bottom: 2em;
+    }
+}
