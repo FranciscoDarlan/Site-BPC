@@ -186,7 +186,9 @@ footer {
 }
 
 @media (max-width:810px) {
-    .container {}
+    .container {
+        color: none;
+    }
 
     nav {
         display: flex;
@@ -239,7 +241,7 @@ footer {
 
     .text-bpc, h1 {
         text-align: center;
-        width: 90%;
+        width: 99%;
     }
 
     .text-bpc .btn-main {
