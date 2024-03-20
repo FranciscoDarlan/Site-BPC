@@ -239,7 +239,8 @@ footer {
         align-items: center;
     }
 
-    .text-bpc, h1 {
+    .text-bpc,
+    h1 {
         text-align: center;
         width: 99%;
     }
@@ -247,7 +248,8 @@ footer {
     .text-bpc .btn-main {
         justify-content: center;
     }
-    .img-bx{
+
+    .img-bx {
         margin-top: 2em;
         width: 100vw;
         border-radius: 0;
