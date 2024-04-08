@@ -4,25 +4,73 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto";
 }
 
 body {
-    background-color: #efefef;
-    min-height: 100vh;
+    transition: none;
 }
 
 .conteiner {
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 0 2%;
+    background-color: white;
+    width: 100vw;
 }
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    height: 90px;
+    height: 15%;
+    width: 100vw;
+}
+
+nav .logo {
+    cursor: pointer;
+}
+
+.my-image-logo-bombeiro {
+    width: 35%;
+    margin-left: 10%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-right: 4em;
+}
+
+nav ul li {
+    padding: 0 2em;
+    font-size: large;
+    font-weight: 500;
+    color: #d10b0b;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #d10b0b;
+}
+
+nav ul li a:hover {
+    color: black;
+    transition: 0.5s;
+}
+
+nav ul li a:active {
+    opacity: .5;
+    color: red;
+}
+
+nav button {
+    border: none;
+    background-color: #5654b3;
+    color: white;
+    cursor: pointer;
+
+    font-size: 2vh;
+    font-weight: 500;
 }
 
 nav .menu-icon {
@@ -30,48 +78,6 @@ nav .menu-icon {
     display: none;
 }
 
-nav .logo {
-    cursor: pointer;
-    padding-top: 5px;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
-}
-
-nav ul li {
-    padding: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    font-size: 17px;
-    text-transform: uppercase;
-    color: #d10b0b;
-}
-
-nav ul li a:active {
-    opacity: .5;
-}
-
-nav button {
-    border: none;
-    background-color: #5654b3;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    letter-spacing: 1px;
-    margin-left: 20px;
-    cursor: pointer;
-}
-
-hr {
-
-    margin-bottom: 20px;
-    margin-left: -180px
-}
 
 main {
     display: flex;
@@ -239,7 +245,8 @@ footer {
         align-items: center;
     }
 
-    .text-bpc, h1 {
+    .text-bpc,
+    h1 {
         text-align: center;
         width: 99%;
     }
@@ -247,7 +254,8 @@ footer {
     .text-bpc .btn-main {
         justify-content: center;
     }
-    .img-bx{
+
+    .img-bx {
         margin-top: 2em;
         width: 100vw;
         border-radius: 0;
