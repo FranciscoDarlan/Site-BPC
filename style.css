@@ -51,10 +51,12 @@ nav ul li a {
     text-transform: uppercase;
     color: #d10b0b;
 }
+
 nav ul li a:hover {
     color: black;
     transition: 0.5s;
 }
+
 nav ul li a:active {
     opacity: .5;
     color: red;
@@ -72,11 +74,13 @@ nav ul li a:active {
     font-weight: 800;
     margin-right: 1vh;
 }
+
 .tag-button-nav:hover {
     background-color: black;
     transition: 0.5s;
 }
-.tag-button-nav:active{
+
+.tag-button-nav:active {
     opacity: .6;
 }
 
@@ -95,7 +99,8 @@ main {
     height: 100%;
     display: flex;
     justify-content: space-around;
-    gap: 8vh;    ;
+    gap: 8vh;
+    ;
     margin-top: 6vh;
 }
 
@@ -167,6 +172,7 @@ main {
     background-color: rgba(0, 0, 0, 0.631);
     transition: 0.5s;
 }
+
 .btn-main:active {
     opacity: 0.5;
 
@@ -178,12 +184,13 @@ main {
     height: 100px;
     width: 100px;
 }
+
 .paragrafoInformaçoes {
     color: white;
     font-size: 1vh;
 }
 
-.div-img-bpc-fogo{
+.div-img-bpc-fogo {
     width: 80%;
 }
 
@@ -202,7 +209,7 @@ main {
     text-align: center;
 }
 
-.paragrafo-informacao-localizacao{
+.paragrafo-informacao-localizacao {
     font-size: 8em;
     font-weight: 800;
     margin-top: 8vh;
@@ -214,7 +221,8 @@ main {
     margin-top: 2em;
 }
 
-#localizacao-curicica, #localizacao-bangu{
+#localizacao-curicica,
+#localizacao-bangu {
     font-size: 3vh;
     font-weight: 300;
     margin-top: 2vh;
@@ -227,7 +235,7 @@ main {
     gap: 1em;
 }
 
-.mapa-bangu { 
+.mapa-bangu {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -235,7 +243,8 @@ main {
     margin-left: 1em;
 }
 
-.paragraph-contato-curicica, .paragraph-contato-bangu{
+.paragraph-contato-curicica,
+.paragraph-contato-bangu {
     font-size: 3vh;
 }
 
@@ -251,7 +260,7 @@ footer {
 }
 
 @media (max-width:810px) {
-    nav{
+    nav {
         background-color: red;
     }
 }
