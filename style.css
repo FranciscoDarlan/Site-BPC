@@ -68,23 +68,20 @@ nav button {
     background-color: #5654b3;
     color: white;
     cursor: pointer;
-
-    font-size: 2vh;
-    font-weight: 500;
 }
 
-nav .menu-icon {
-    cursor: pointer;
-    display: none;
+hr {
+
+    margin-bottom: 20px;
+    margin-left: -180px
 }
 
 
 main {
     display: flex;
-    width: 100%;
+    width: 100vw;
     flex-direction: row;
     justify-content: space-around;
-
 }
 
 h1,
