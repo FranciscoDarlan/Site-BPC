@@ -12,7 +12,7 @@ body {
 }
 
 .conteiner {
-    background-color: white;
+    background-image: linear-gradient(rgba(250, 249, 249, 0.415), rgba(232, 232, 242, 0.472));
     width: 100%;
 }
 
