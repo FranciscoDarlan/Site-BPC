@@ -13,144 +13,211 @@ body {
 
 .conteiner {
     background-color: white;
-    width: 100vw;
+    width: 100%;
 }
 
 nav {
+    width: 100%;
+    height: 15vh;
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    height: 15%;
-    width: 100vw;
-}
-
-nav .logo {
-    cursor: pointer;
 }
 
 .my-image-logo-bombeiro {
-    width: 35%;
-    margin-left: 10%;
+    height: 80%;
+    margin-left: 1vh;
+    cursor: pointer;
 }
 
-nav ul {
+.caixa-ul-nav {
     display: flex;
+    align-items: center;
+    flex-direction: row;
     list-style: none;
-    margin-right: 4em;
+    font-size: 3vh;
+    gap: 8vh;
+    font-weight: 500;
 }
 
 nav ul li {
-    padding: 0 2em;
-    font-size: large;
-    font-weight: 500;
     color: #d10b0b;
 }
 
 nav ul li a {
+    font-size: 3.5vh;
     text-decoration: none;
-    font-size: 2em;
     text-transform: uppercase;
     color: #d10b0b;
 }
-
 nav ul li a:hover {
     color: black;
     transition: 0.5s;
 }
-
 nav ul li a:active {
     opacity: .5;
     color: red;
 }
 
-nav button {
+.tag-button-nav {
     border: none;
-    background-color: #5654b3;
+    background-color: #bb871e;
     color: white;
     cursor: pointer;
+    font-size: 3vh;
+    width: 19vw;
+    height: 10vh;
+    border-radius: 40px;
+    font-weight: 800;
+    margin-right: 1vh;
+}
+.tag-button-nav:hover {
+    background-color: black;
+    transition: 0.5s;
+}
+.tag-button-nav:active{
+    opacity: .6;
+}
+
+.image-icon-traco {
+    display: none;
 }
 
 hr {
-
-    margin-bottom: 20px;
-    margin-left: -180px
+    border: 0.1 solid;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
-
 
 main {
+    width: 100%;
+    height: 100%;
     display: flex;
-    width: 100vw;
-    flex-direction: row;
     justify-content: space-around;
-}
-
-h1,
-b {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 25px;
-    font-weight: 700px;
+    gap: 8vh;    ;
+    margin-top: 6vh;
 }
 
 .text-bpc {
     width: 50%;
-    margin-top: 20px;
+    height: 50%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-left: 1%;
+}
+
+.text-h1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 6vh;
+    font-weight: 700;
+}
+
+.text-h2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 300;
+    font-size: 4vh;
+    margin: 20px 0;
+    letter-spacing: 1px;
+}
+
+.text-h3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 3vh;
+}
+
+.paragrafy-main {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    font-size: 3vh;
+    font-weight: 300;
+}
+
+.div-btn-matricula {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-main {
+    width: 60%;
+    height: 10vh;
+    margin: 5% auto;
+    font-size: 3vh;
+    font-weight: 700;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 5vh;
+    letter-spacing: .3px;
+    cursor: pointer;
+}
+
+.btn-main:hover {
+    background-color: rgba(0, 0, 0, 0.631);
+    transition: 0.5s;
+}
+.btn-main:active {
+    opacity: 0.5;
+
+}
+
+.div-medias-sociais {
+    background-color: black;
+    margin: 10px;
+    height: 100px;
+    width: 100px;
+}
+.paragrafoInformaçoes {
+    color: white;
+    font-size: 1vh;
+}
+
+.div-img-bpc-fogo{
+    width: 80%;
 }
 
 .text-bpc h1 b {
     color: #ed0909;
 }
 
-.text-bpc,
-p {
-    font-weight: 300;
-}
-
-.main,
-h2 {
-    font-weight: 300;
-    font-size: larger;
-    margin: 20px 0;
-}
-
-main,
-h3 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.btn-main {
-    font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    border: none;
-    background-color: #5654b3;
-    color: white;
-    padding: 26px 2px;
-    border-radius: 5px;
-    letter-spacing: .3px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-.medias-sociais {
-    background-color: black;
-}
-
-.img-bx {
-    width: 21em;
-    border-radius: 30%;
+.img-bpc-rasteijando-fogo {
+    width: 95%;
+    height: 72vh;
+    border-radius: 5vh;
 }
 
 .local-curso {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5em;
+    width: 100%;
+    text-align: center;
 }
 
-.img-mapas {
+.paragrafo-informacao-localizacao{
+    font-size: 8em;
+    font-weight: 800;
+    margin-top: 8vh;
+}
+
+.div-img-mapas {
     display: flex;
-    margin-top: 1em;
+    justify-content: space-around;
+    margin-top: 2em;
+}
+
+#localizacao-curicica, #localizacao-bangu{
+    font-size: 3vh;
+    font-weight: 300;
+    margin-top: 2vh;
 }
 
 .mapa-curicica {
@@ -158,10 +225,9 @@ h3 {
     flex-direction: column;
     align-items: center;
     gap: 1em;
-    border-right: 1px solid;
 }
 
-.mapa-bangu {
+.mapa-bangu { 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -169,105 +235,23 @@ h3 {
     margin-left: 1em;
 }
 
-.mapa-curicica,
-.paragraph-contato-curicica {
-    width: 23em;
-}
-
-.mapa-bangu,
-.paragraph-contato-bangu {
-    width: 20em;
+.paragraph-contato-curicica, .paragraph-contato-bangu{
+    font-size: 3vh;
 }
 
 footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1em;
-    margin-top: 5em;
-    margin-bottom: 1em;
+    gap: 4vh;
+    font-size: 6em;
+    font-weight: 200;
+    margin-top: 5%;
+    margin-bottom: 4vh;
 }
 
 @media (max-width:810px) {
-    .container {
-        color: none;
-    }
-
-    nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-
-    nav .menu-icon {
-        display: block;
-    }
-
-    nav ul {
-        position: fixed;
-        width: 60%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        transform: translateX(-100%);
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        transition: 0.3s ease-in;
-        background-color: rgba(0, 0, 0, 0.13);
-    }
-
-    nav ul:active {
-        transform: translateX(0);
-    }
-
-    nav ul li {
-        padding: 10px;
-    }
-
-    nav ul a {
-        font-size: 18px;
-        color: white;
-    }
-
-    nav ul button {
-        background-color: #ed0909;
-        font-size: 18px;
-        margin: 10px;
-    }
-
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .text-bpc,
-    h1 {
-        text-align: center;
-        width: 99%;
-    }
-
-    .text-bpc .btn-main {
-        justify-content: center;
-    }
-
-    .img-bx {
-        margin-top: 2em;
-        width: 100vw;
-        border-radius: 0;
-    }
-
-    .img-mapas {
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-    }
-
-    .mapa-curicica {
-        padding-bottom: 2em;
-        border-right: none;
-        border-bottom: 1px solid;
-        margin-bottom: 2em;
+    nav{
+        background-color: red;
     }
 }
