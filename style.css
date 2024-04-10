@@ -51,12 +51,10 @@ nav ul li a {
     text-transform: uppercase;
     color: #d10b0b;
 }
-
 nav ul li a:hover {
     color: black;
     transition: 0.5s;
 }
-
 nav ul li a:active {
     opacity: .5;
     color: red;
@@ -74,12 +72,10 @@ nav ul li a:active {
     font-weight: 800;
     margin-right: 1vh;
 }
-
 .tag-button-nav:hover {
     background-color: black;
     transition: 0.5s;
 }
-
 .tag-button-nav:active {
     opacity: .6;
 }
@@ -119,6 +115,10 @@ main {
     text-align: center;
     font-size: 6vh;
     font-weight: 700;
+}
+
+.text-bpc-red {
+    color: #ed0909;
 }
 
 .text-h2 {
@@ -167,12 +167,10 @@ main {
     letter-spacing: .3px;
     cursor: pointer;
 }
-
 .btn-main:hover {
     background-color: rgba(0, 0, 0, 0.631);
     transition: 0.5s;
 }
-
 .btn-main:active {
     opacity: 0.5;
 
@@ -192,10 +190,6 @@ main {
 
 .div-img-bpc-fogo {
     width: 80%;
-}
-
-.text-bpc h1 b {
-    color: #ed0909;
 }
 
 .img-bpc-rasteijando-fogo {
@@ -260,7 +254,76 @@ footer {
 }
 
 @media (max-width:810px) {
+    .conteiner{
+        width: 100%;
+    }
+
     nav {
-        background-color: red;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .my-image-logo-bombeiro {
+        height: 80%;
+        cursor: pointer;
+    }
+
+    .caixa-ul-nav {
+        display: none;
+    }
+
+    .tag-button-nav {
+        display: none;
+    }
+
+    .image-icon-traco {
+        display: flex;
+        width: 6vh;
+        cursor: pointer;
+    }
+    
+    hr{
+        display: none;
+    }
+
+    main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text-bpc {
+        width: 100%;
+    }
+
+    .text-h1 {
+        font-size: 4vh;
+    }
+
+    .text-h2 {
+        font-size: 3vh;
+    }
+
+    .text-h3 {
+        font-size: 3vh;
+        padding: 0 0.2vh;
+    }
+
+    .paragrafy-main {
+        font-size: 3vh;
+        padding: 0 0.5vh;
+    }
+
+    .div-img-bpc-fogo {
+        width: 100%;
+    }
+
+    .img-bpc-rasteijando-fogo {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        border-radius: 1vh;
     }
 }
