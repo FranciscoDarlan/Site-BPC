@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="imagex/png" href="./asset-img/logo-polo-curicica-removebg-preview.png">
     <title>Polo Curicica/Bangu</title>
 </head>
 
@@ -20,7 +21,7 @@
                 <li><a href="#">Equipe</a></li>
                 <li><a href="#">Contatos</a></li>
                 <li class="classeSimulador"><a href="#">Simulados</a></li>
-                <li><a href="#">Localização</a></li>
+                <li><a href="#localizacao-polo">Localização</a></li>
                 <button class="tag-button-nav">MATRICULE-SE PELO WHATSAPP</button>
             </ul>
 
@@ -66,11 +67,16 @@
                 </div>
 
                 <div class="div-medias-sociais">
-                    <p class="paragrafoInformaçoes">ESPAÇO PARA COLOCAR AS imagens de rede sociais</p>
-                    <a href="#"> <i class="fa fa-instagram"></i></a>
-                    <a href="#"> <i class="fa fa-facebook"></i></a>
-                    <a href="#"> <i class="fa fa-twitter"></i></a>
-                    <a href="#"> <i class="fa fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/polocuricica/"> <img class="logo-rede-sociais"
+                            src="./asset-img/logo-intagram-removebg-preview.png" alt=""> </a>
+                    <a href="https://chat.whatsapp.com/HRbTvEkKlaa9KOBgVWlwAd"> <img class="logo-rede-sociais"
+                            id="id-logo-whatssap"
+                            src="./asset-img/logotipo-do-whatsapp-do-logotipo-do-icone-do-whatsapp-gratis-gratis-vetor-removepreview.png"
+                            alt=""></a>
+                    <a href="#"> <img class="logo-rede-sociais" id="id-logo-face"
+                            src="./asset-img/logo_face-removebg-preview.png" alt=""></i></a>
+                    <a href="mailto:exemplo@examplo.com?subject=Assunto&body=Digite sua mensagem"> <img
+                            class="logo-rede-sociais" src="./asset-img/513_email-removebg-preview.png" alt=""></i></a>
                 </div>
             </div>
 
@@ -82,24 +88,25 @@
 
         <div class="local-curso">
 
-            <p class="paragrafo-informacao-localizacao">Saiba onde está a nossa Unidade:</p>
+            <p class="paragrafo-informacao-localizacao"><a name="localizacao-polo">Saiba onde está a nossa Unidade:</a>
+            </p>
 
-            <div class="div-img-mapas">
+            <div id="#localizacao" class="div-img-mapas">
 
                 <div class="mapa-curicica">
                     <p id="localizacao-curicica"><b>Local em Curicica</b></p>
-                    <iframe
+                    <iframe class="class-iframe-mapa"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.1977264278194!2d-43.38310439999995!3d-22.942944100000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd91748788813%3A0x636b28fc64ffd280!2sR.%20Guaravera%2C%20181%20-%20Curicica%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2022710-040!5e0!3m2!1spt-BR!2sbr!4v1694302154634!5m2!1spt-BR!2sbr"
-                        width="750" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                        style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <p class="paragraph-contato-curicica">Telefone para contato Curicica: <span>2197943-6806</span></p>
                 </div>
 
                 <div class="mapa-bangu">
                     <p id="localizacao-bangu"><b>Local em Bangu</b></p>
-                    <iframe
+                    <iframe class="class-iframe-mapa"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.895624173212!2d-43.46455079999999!3d-22.8803138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bdf9352b0c8cd%3A0x336d8ffde4ee6053!2sAv.%20C%C3%B4nego%20Vasconcelos%2C%20523%20-%20Bangu%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2021810-011!5e0!3m2!1spt-BR!2sbr!4v1694302589296!5m2!1spt-BR!2sbr"
-                        width="750" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                        style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <p class="paragraph-contato-bangu">Telefone para contato Bangu: <span>2197940-1604</span></p>
                 </div>
@@ -108,7 +115,8 @@
         </div>
 
         <footer>
-            <img src="./asset-img/logo-polo-curicica-removebg-preview.png" alt="logo-polo-curicica">
+            <img class="img-logo-bpc-footer" src="./asset-img/logo-polo-curicica-removebg-preview.png"
+                alt="logo-polo-curicica">
 
             <p>© copyright 2024</p>
             <p> Polo Curicica/Bangu Profissionalizante - Todos os direitos reservados.</p>
