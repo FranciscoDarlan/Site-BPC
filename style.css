@@ -8,7 +8,7 @@
 }
 
 body {
-    transition: none;
+    background-color: linear-gradient(rgba(250, 249, 249, 0.415), rgba(232, 232, 242, 0.472));
 }
 
 .conteiner {
@@ -51,10 +51,12 @@ nav ul li a {
     text-transform: uppercase;
     color: #d10b0b;
 }
+
 nav ul li a:hover {
     color: black;
     transition: 0.5s;
 }
+
 nav ul li a:active {
     opacity: .5;
     color: red;
@@ -62,7 +64,7 @@ nav ul li a:active {
 
 .tag-button-nav {
     border: none;
-    background-color: #bb871e;
+    background: linear-gradient(rgb(196, 11, 5), rgb(207, 123, 33));
     color: white;
     cursor: pointer;
     font-size: 3vh;
@@ -73,11 +75,11 @@ nav ul li a:active {
     margin-right: 1vh;
 }
 .tag-button-nav:hover {
-    background-color: black;
-    transition: 0.5s;
+    background: linear-gradient(rgb(11, 10, 10), rgb(11, 10, 10));
+    transition: 1s;
 }
 .tag-button-nav:active {
-    opacity: .6;
+    opacity: .8;
 }
 
 .image-icon-traco {
@@ -88,6 +90,7 @@ hr {
     border: 0.1 solid;
     margin-top: 1em;
     margin-bottom: 1em;
+    box-shadow: 10px rgb(20, 5, 3);
 }
 
 main {
@@ -95,8 +98,6 @@ main {
     height: 100%;
     display: flex;
     justify-content: space-around;
-    gap: 8vh;
-    ;
     margin-top: 6vh;
 }
 
@@ -177,10 +178,24 @@ main {
 }
 
 .div-medias-sociais {
-    background-color: black;
-    margin: 10px;
-    height: 100px;
-    width: 100px;
+    display: flex;
+    flex-direction: row;
+    gap: 10vh;
+    margin-top: 3vh;
+}
+
+.logo-rede-sociais{
+    height: 6vh;
+}
+
+#id-logo-whatssap{
+    height: 10vh;
+    margin-top: -2vh;
+}
+
+#id-logo-face{
+    height: 8.3vh;
+    margin-top: -1.3vh;
 }
 
 .paragrafoInformaçoes {
@@ -189,13 +204,15 @@ main {
 }
 
 .div-img-bpc-fogo {
-    width: 80%;
+    width: 50%;
+    height: auto;
 }
 
 .img-bpc-rasteijando-fogo {
-    width: 95%;
-    height: 72vh;
+    width: 65%;
+    height: auto;
     border-radius: 5vh;
+    margin-left: 10vh;
 }
 
 .local-curso {
@@ -220,6 +237,11 @@ main {
     font-size: 3vh;
     font-weight: 300;
     margin-top: 2vh;
+}
+
+.class-iframe-mapa {
+    width: 750px;
+    height: 600px;
 }
 
 .mapa-curicica {
@@ -250,11 +272,12 @@ footer {
     font-size: 6em;
     font-weight: 200;
     margin-top: 5%;
-    margin-bottom: 4vh;
+    padding-bottom: 4vh;
+    text-align: center;
 }
 
-@media (max-width:810px) {
-    .conteiner{
+@media (max-width:2089px) {
+    .conteiner {
         width: 100%;
     }
 
@@ -283,15 +306,15 @@ footer {
         width: 6vh;
         cursor: pointer;
     }
-    
-    hr{
+
+    hr {
         display: none;
     }
 
     main {
         width: 100%;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .text-bpc {
@@ -313,7 +336,30 @@ footer {
 
     .paragrafy-main {
         font-size: 3vh;
-        padding: 0 0.5vh;
+        margin-top: 1vh;
+        padding: 0 10vh;
+    }
+
+    .btn-main {
+        width: 60%;
+        height: 10vh;
+        margin: 5% auto;
+        font-size: 3vh;
+        font-weight: 700;
+        border: none;
+        background: linear-gradient(rgb(196, 11, 5), rgb(207, 123, 33));
+        color: white;
+        border-radius: 5vh;
+        letter-spacing: .3px;
+        cursor: pointer;
+    }
+    .btn-main:hover {
+        background-color: rgba(0, 0, 0, 0.631);
+        transition: 0.5s;
+    }
+    .btn-main:active {
+        opacity: 0.5;
+    
     }
 
     .div-img-bpc-fogo {
@@ -322,8 +368,61 @@ footer {
 
     .img-bpc-rasteijando-fogo {
         display: flex;
-        justify-content: flex-start;
-        width: 100%;
+        align-items: center;
+        margin: -2vh auto 5vh auto;
+        width: 50%;
+        height: auto;
         border-radius: 1vh;
+    }
+
+    .local-curso {
+        width: 100%;
+        text-align: center;
+    }
+
+    .paragrafo-informacao-localizacao {
+        font-size: 4vh;
+        font-weight: 800;
+        margin-top: 8vh;
+    }
+
+    .div-img-mapas {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2em;
+    }
+
+    .class-iframe-mapa {
+        width: 280px;
+        height: 150px;
+    }
+
+    #localizacao-bangu {
+        font-weight: 300;
+        margin-top: 13vh;
+    }
+
+    .paragraph-contato-curicica,
+    .paragraph-contato-bangu {
+        font-size: 3vh;
+        padding: 0 1px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4vh;
+        font-size: 3vh;
+        font-weight: 200;
+        margin-top: 6vh;
+        text-align: center;
+        padding: 0 4vh;
+        padding-bottom: 4vh;
+    }
+
+    .img-logo-bpc-footer {
+        width: 30%;
     }
 }
