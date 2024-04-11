@@ -7,4 +7,4 @@ var linkSimulador = document.querySelector('classeSimulador');
 
 menuBar.addEventListener('click', function () {
     menu.classList.toggle('active');
-})
+});
