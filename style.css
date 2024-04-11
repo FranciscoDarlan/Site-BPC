@@ -280,11 +280,15 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 4vh;
-  font-size: 4vh;
+  font-size: 2vh;
   font-weight: 200;
   margin-top: 5%;
   padding-bottom: 4vh;
   text-align: center;
+}
+
+.img-logo-bpc-footer{
+  height: 100%;
 }
 
 @media screen and (max-width:900px) {
@@ -364,7 +368,7 @@ footer {
     letter-spacing: .3px;
     cursor: pointer;
   }
-
+  
   .btn-main:hover {
     background-color: rgba(0, 0, 0, 0.631);
     transition: 0.5s;
