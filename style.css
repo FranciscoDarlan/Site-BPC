@@ -5,6 +5,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto";
+  background-color: linear-gradient(rgba(250, 249, 249, 0.415), rgba(232, 232, 242, 0.472));
+
 }
 
 body {
@@ -12,7 +14,6 @@ body {
 }
 
 .conteiner {
-  background-image: linear-gradient(rgba(250, 249, 249, 0.415), rgba(232, 232, 242, 0.472));
   width: 100vw;
   height: 100vh;
 }
@@ -217,6 +218,8 @@ colocado
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  margin-right: 3vw;
+
 }
 
 .img-bpc-rasteijando-fogo {
