@@ -101,11 +101,12 @@ main {
   height: 100vh;
   display: flex;
   justify-content: space-around;
-  margin-top: 6vh;
+  margin-top: 3vh;
 }
 
 .text-bpc {
-  width: 50vw;
+  width: 45vw;
+  height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -130,7 +131,7 @@ main {
   flex-direction: row;
   align-items: center;
   font-weight: 300;
-  font-size: 3vh;
+  font-size: 2.8vh;
   margin: 20px 0;
   letter-spacing: 1px;
 }
@@ -147,9 +148,9 @@ main {
   width: 50vw;
   display: flex;
   text-align: center;
-  font-size: 2.8vh;
+  font-size: 2.5vh;
   font-weight: 300;
-  padding: 10px 90px;
+  padding: 0vh 2vh;
 }
 
 .div-btn-matricula {
@@ -160,8 +161,8 @@ main {
 }
 
 .btn-main {
-  width: 60%;
-  height: 10vh;
+  width: 30vw;
+  height: 8vh;
   margin: 20px auto;
   font-size: 3vh;
   font-weight: 700;
@@ -214,17 +215,76 @@ aqui config que so
 aparece a imagem do tamanho 
 colocado
 */
-.div-img-bpc-fogo {
-  width: 100vw;
-  height: 100vh;
+.slider {
+  margin: 30px auto;
+  width: 900px;
+  height: 560px;
   overflow: hidden;
-  margin-right: 3vw;
+}
 
+
+.div-img-bpc-fogo {
+  /*slides*/
+  width: 400%;
+  height: 400px;
+  display: flex;
+}
+
+.slide input {
+  display: none;
+}
+
+.slide {
+  width: 25%;
+  position: relative;
+}
+
+/* aqui dei um nome para img, mas nao precisava
+era somente dar um espaço utilizar a classe da div
+e coloca a tag img -> slide img{} */
+.classe-img {
+  width: 900px;
+  border-radius: 30px;
+}
+
+
+/* aqui config botao*/
+.manual-navigation {
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+  background-color: rgb(52, 24, 92);
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background-color: #fff;
+}
+
+#radio1:checked~.first {
+  margin-left: 0;
+}
+
+#radio2:checked~.first {
+  margin-left: 25%;
 }
 
 .img-bpc-rasteijando-fogo {
   width: 50vw;
-  height: auto;
+  height: 65vh;
   border-radius: 5vh;
 }
 
@@ -292,7 +352,7 @@ footer {
   text-align: center;
 }
 
-.img-logo-bpc-footer{
+.img-logo-bpc-footer {
   height: 20vh;
   margin-top: 10vh;
 }
@@ -374,7 +434,7 @@ footer {
     letter-spacing: .3px;
     cursor: pointer;
   }
-  
+
   .btn-main:hover {
     background-color: rgba(0, 0, 0, 0.631);
     transition: 0.5s;
