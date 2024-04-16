@@ -98,9 +98,7 @@ hr {
 
 main {
   width: 100vw;
-  height: 100vh;
   display: flex;
-  justify-content: space-around;
   margin-top: 3vh;
 }
 
@@ -181,7 +179,6 @@ main {
 
 .btn-main:active {
   opacity: 0.5;
-
 }
 
 .div-medias-sociais {
@@ -218,7 +215,7 @@ colocado
 .slider {
   margin: 30px auto;
   width: 900px;
-  height: 560px;
+  height: 650px;
   overflow: hidden;
 }
 
@@ -230,7 +227,8 @@ colocado
   display: flex;
 }
 
-.slide input {
+.div-img-bpc-fogo input {
+  /*slides com input*/
   display: none;
 }
 
@@ -242,28 +240,49 @@ colocado
 /* aqui dei um nome para img, mas nao precisava
 era somente dar um espaço utilizar a classe da div
 e coloca a tag img -> slide img{} */
-.classe-img {
-  width: 900px;
+.slide img {
+  width: 45vw;
+  height: 55vh;
   border-radius: 30px;
+  margin-left: 50px;
 }
 
+#id-img-2-slide {
+  width: 38vw;
+  height: 61vh;
+  margin-left: 90px;
+}
+
+#id-img-3-slide {
+  width: 35vw;
+  height: 65vh;
+  margin-left: 15vh;
+}
+
+#id-img-4-slide {
+  width: 35vw;
+  height: 64vh;
+  margin-left: 15vh;
+}
 
 /* aqui config botao*/
 .manual-navigation {
   position: absolute;
   width: 800px;
-  margin-top: -40px;
+  margin-top: -37px;
+  margin-left: 5vh;
   display: flex;
   justify-content: center;
+  gap: 2vh;
 }
 
 .manual-btn {
-  border: 2px solid #fff;
+  border: 2px solid #0b0b0b;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
   transition: 1s;
-  background-color: rgb(52, 24, 92);
+  background-color: rgb(248, 241, 241);
 }
 
 .manual-btn:not(:last-child) {
@@ -271,7 +290,7 @@ e coloca a tag img -> slide img{} */
 }
 
 .manual-btn:hover {
-  background-color: #fff;
+  background-color: rgb(255, 0, 0);
 }
 
 #radio1:checked~.first {
@@ -279,7 +298,15 @@ e coloca a tag img -> slide img{} */
 }
 
 #radio2:checked~.first {
-  margin-left: 25%;
+  margin-left: -25%;
+}
+
+#radio3:checked~.first {
+  margin-left: -50%;
+}
+
+#radio4:checked~.first {
+  margin-left: -75%;
 }
 
 .img-bpc-rasteijando-fogo {
@@ -359,19 +386,117 @@ footer {
 
 @media screen and (max-width:1080px) {
   .conteiner {
-    width: 100%;
+    width: 100vw;
+    height: auto;
   }
 
   nav {
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
   }
 
-  .my-image-logo-bombeiro {
-    height: 80%;
+  /*
+aqui config que so 
+aparece a imagem do tamanho 
+colocado @MEDIA SCREEN
+*/
+  .slider {
+    margin: 30px auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+  }
+
+  .div-img-bpc-fogo {
+    /*slides*/
+    width: 400%;
+    height: 400px;
+    display: flex;
+  }
+
+  .div-img-bpc-fogo input {
+    /*slides com input*/
+    display: none;
+  }
+
+  .slide {
+    width: 25%;
+    position: relative;
+  }
+
+  /* aqui dei um nome para img, mas nao precisava
+era somente dar um espaço utilizar a classe da div
+e coloca a tag img -> slide img{} */
+  .slide img {
+    width: 95vw;
+    height: 40vh;
+    border-radius: 30px;
+  }
+
+  #id-img-2-slide {
+    width: 95vw;
+    height: 50vh;
+
+    margin-right: 90px;
+
+  }
+
+  #id-img-3-slide {
+    width: 35vw;
+    height: 65vh;
+    margin-left: 15vh;
+  }
+
+  #id-img-4-slide {
+    width: 35vw;
+    height: 64vh;
+    margin-left: 15vh;
+  }
+
+  /* aqui config botao*/
+  .manual-navigation {
+    position: absolute;
+    width: 800px;
+    margin-top: -37px;
+    margin-left: 5vh;
+    display: flex;
+    justify-content: center;
+    gap: 2vh;
+  }
+
+  .manual-btn {
+    border: 2px solid #0b0b0b;
+    padding: 5px;
+    border-radius: 10px;
     cursor: pointer;
+    transition: 1s;
+    background-color: rgb(248, 241, 241);
+  }
+
+  .manual-btn:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  .manual-btn:hover {
+    background-color: rgb(255, 0, 0);
+  }
+
+  #radio1:checked~.first {
+    margin-left: 0;
+  }
+
+  #radio2:checked~.first {
+    margin-left: -25%;
+  }
+
+  #radio3:checked~.first {
+    margin-left: -50%;
+  }
+
+  #radio4:checked~.first {
+    margin-left: -75%;
   }
 
   .caixa-ul-nav {
@@ -393,13 +518,14 @@ footer {
   }
 
   main {
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column-reverse;
+    margin-bottom: 65vh;
   }
 
   .text-bpc {
-    width: 100%;
+    width: 100vw;
   }
 
   .text-h1 {
@@ -407,25 +533,23 @@ footer {
   }
 
   .text-h2 {
-    font-size: 3vh;
+    font-size: 2vh;
   }
 
   .text-h3 {
-    font-size: 3vh;
-    padding: 0 0.2vh;
+    font-size: 2vh;
   }
 
   .paragrafy-main {
-    font-size: 3vh;
+    font-size: 2vh;
     margin-top: 1vh;
-    padding: 0 10vh;
+    padding: 0px -100vh;
   }
 
   .btn-main {
-    width: 60%;
-    height: 10vh;
-    margin: 5% auto;
-    font-size: 3vh;
+    width: 60vw;
+    height: 8vh;
+    font-size: 2.5vh;
     font-weight: 700;
     border: none;
     background: linear-gradient(rgb(196, 11, 5), rgb(207, 123, 33));
@@ -445,10 +569,6 @@ footer {
 
   }
 
-  .div-img-bpc-fogo {
-    width: 100%;
-  }
-
   .img-bpc-rasteijando-fogo {
     display: flex;
     align-items: center;
@@ -459,7 +579,7 @@ footer {
   }
 
   .local-curso {
-    width: 100%;
+    width: 100vw;
     text-align: center;
   }
 
@@ -476,8 +596,8 @@ footer {
   }
 
   .class-iframe-mapa {
-    width: 280px;
-    height: 150px;
+    width: 30vw;
+    height: 15vh;
   }
 
   #localizacao-bangu {
@@ -487,7 +607,7 @@ footer {
 
   .paragraph-contato-curicica,
   .paragraph-contato-bangu {
-    font-size: 3vh;
+    font-size: 2vh;
     padding: 0 1px;
   }
 
@@ -497,7 +617,7 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 4vh;
-    font-size: 3vh;
+    font-size: 2vh;
     font-weight: 200;
     margin-top: 6vh;
     text-align: center;
@@ -506,6 +626,7 @@ footer {
   }
 
   .img-logo-bpc-footer {
-    width: 30%;
+    width: 12vw;
+    height: 12vh;
   }
 }
