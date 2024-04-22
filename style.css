@@ -521,7 +521,7 @@ e coloca a tag img -> slide img{} */
     width: 100vw;
     display: flex;
     flex-direction: column-reverse;
-    margin-bottom: 65vh;
+    margin-bottom: 46vh;
   }
 
   .text-bpc {
@@ -544,6 +544,10 @@ e coloca a tag img -> slide img{} */
     font-size: 2vh;
     margin-top: 1vh;
     padding: 0px -100vh;
+  }
+
+  .div-btn-matricula{
+    margin: 2vh 5vh 0vh 0vh;
   }
 
   .btn-main {
@@ -626,7 +630,7 @@ e coloca a tag img -> slide img{} */
   }
 
   .img-logo-bpc-footer {
-    width: 12vw;
+    width: 19vw;
     height: 12vh;
   }
 }
