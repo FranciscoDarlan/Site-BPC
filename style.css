@@ -6,7 +6,6 @@
   box-sizing: border-box;
   font-family: "Roboto";
   background-color: linear-gradient(rgba(250, 249, 249, 0.415), rgba(232, 232, 242, 0.472));
-
 }
 
 body {
@@ -16,38 +15,41 @@ body {
 .conteiner {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 nav {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  width: 100vw;
-  height: 15vh;
+  margin: 1vh;
 }
 
 .my-image-logo-bombeiro {
-  height: 80px;
+  position: static;
+  height: 10vh;
   margin-left: 1vh;
   cursor: pointer;
 }
 
 .caixa-ul-nav {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  list-style: none;
 }
 
-nav ul li {
-  color: #d10b0b;
+.caixa-link-li-nomes {
+  display: flex;
+  align-items: center;
+  gap: 5vh;
   margin-right: 5vh;
+  list-style-type: none;
+  
+  color: #d10b0b;
   font-weight: bold;
+  font-size: 2.8vh;
+
 }
 
 nav ul li a {
-  font-size: 3vh;
   text-decoration: none;
   text-transform: uppercase;
   color: #d10b0b;
@@ -97,18 +99,16 @@ hr {
 }
 
 main {
-  width: 100vw;
   display: flex;
   margin-top: 3vh;
 }
 
 .text-bpc {
-  width: 45vw;
-  height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 1vw;
+  margin-left: 0.2vw;
+  gap: 2vh;
 }
 
 .text-h1 {
@@ -200,11 +200,6 @@ main {
 #id-logo-face {
   height: 8.3vh;
   margin-top: -1.3vh;
-}
-
-.paragrafoInformaçoes {
-  color: white;
-  font-size: 1vh;
 }
 
 /*
@@ -309,11 +304,7 @@ e coloca a tag img -> slide img{} */
   margin-left: -75%;
 }
 
-.img-bpc-rasteijando-fogo {
-  width: 50vw;
-  height: 65vh;
-  border-radius: 5vh;
-}
+
 
 .local-curso {
   display: flex;
@@ -321,12 +312,13 @@ e coloca a tag img -> slide img{} */
   justify-content: center;
   text-align: center;
   margin-top: 1vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 .paragrafo-informacao-localizacao {
   font-size: 4vh;
   font-weight: 800;
-  margin-top: 8vh;
 }
 
 .div-img-mapas {
@@ -409,12 +401,7 @@ colocado @MEDIA SCREEN
     overflow: hidden;
   }
 
-  .div-img-bpc-fogo {
-    /*slides*/
-    width: 400%;
-    height: 400px;
-    display: flex;
-  }
+
 
   .div-img-bpc-fogo input {
     /*slides com input*/
@@ -430,39 +417,40 @@ colocado @MEDIA SCREEN
 era somente dar um espaço utilizar a classe da div
 e coloca a tag img -> slide img{} */
   .slide img {
-    width: 95vw;
-    height: 40vh;
-    border-radius: 30px;
+    width: 90vw;
+    height: 44vh;
+    border-radius: 14px;
+    margin-top: 1vh;
+    margin-left: 3vh;
+
   }
 
   #id-img-2-slide {
-    width: 95vw;
-    height: 50vh;
-
-    margin-right: 90px;
+    width: 93vw;
+    height: 55vh;
+    margin-left: 2vh;
 
   }
 
   #id-img-3-slide {
-    width: 35vw;
-    height: 65vh;
-    margin-left: 15vh;
+    width: 86vw;
+    height: 53vh;
+    margin-left: 5vh;
   }
 
   #id-img-4-slide {
-    width: 35vw;
-    height: 64vh;
-    margin-left: 15vh;
+    width: 86vw;
+    height: 53vh;
+    margin-left: 5vh;
   }
 
   /* aqui config botao*/
   .manual-navigation {
-    position: absolute;
-    width: 800px;
-    margin-top: -37px;
-    margin-left: 5vh;
     display: flex;
-    justify-content: center;
+    position: absolute;
+    width: 100vw;
+    margin-top: -37px;
+    margin-left: 0;
     gap: 2vh;
   }
 
@@ -518,10 +506,7 @@ e coloca a tag img -> slide img{} */
   }
 
   main {
-    width: 100vw;
-    display: flex;
     flex-direction: column-reverse;
-    margin-bottom: 46vh;
   }
 
   .text-bpc {
@@ -541,12 +526,13 @@ e coloca a tag img -> slide img{} */
   }
 
   .paragrafy-main {
+    width: 80vw;
     font-size: 2vh;
     margin-top: 1vh;
-    padding: 0px -100vh;
+    padding: 0px
   }
 
-  .div-btn-matricula{
+  .div-btn-matricula {
     margin: 2vh 5vh 0vh 0vh;
   }
 
@@ -573,18 +559,18 @@ e coloca a tag img -> slide img{} */
 
   }
 
-  .img-bpc-rasteijando-fogo {
+  .div-medias-sociais {
     display: flex;
-    align-items: center;
-    margin: -2vh auto 5vh auto;
-    width: 50%;
-    height: auto;
-    border-radius: 1vh;
+    flex-direction: row;
+    gap: 5vh;
+    margin-top: 3vh;
   }
 
   .local-curso {
-    width: 100vw;
-    text-align: center;
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: 85vh;
   }
 
   .paragrafo-informacao-localizacao {
@@ -623,14 +609,13 @@ e coloca a tag img -> slide img{} */
     gap: 4vh;
     font-size: 2vh;
     font-weight: 200;
-    margin-top: 6vh;
     text-align: center;
     padding: 0 4vh;
     padding-bottom: 4vh;
   }
 
   .img-logo-bpc-footer {
-    width: 19vw;
     height: 12vh;
+    margin-top: 12vh;
   }
 }
