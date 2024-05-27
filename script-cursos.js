@@ -2,6 +2,7 @@ let buttonMostrarTudo = document.querySelector('.show-all'); // button chamar fu
 let divCardapio = document.querySelector('.div-cardapio-complet'); // div que mostra as informações
 
 let buttonMostraDesconto = document.querySelector('.show-Descount');
+
 // PRECISO CRIAR A FUNCTION DE NAVEGAR ENTRE AS PAGINAS
 function MostrarTudoForEath() {
   let myDivCardapio = ''; // começa a variavel sem nada ..
@@ -25,6 +26,10 @@ function mostrarDesconto() {
   menuOptions.map(newArrayDescount)
 }
 
+//função volta para página inicial
+function voltaPaginaPrincipal() {
+  window.location.href = "index.html";
+}
 
 buttonMostraDesconto.addEventListener('click', mostrarDesconto)
 buttonMostrarTudo.addEventListener('click', MostrarTudoForEath);
