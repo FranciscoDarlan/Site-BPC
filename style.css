@@ -9,72 +9,81 @@
 }
 
 body {
+  /* pagina toda!!! */
   background-color: linear-gradient(rgba(250, 249, 249, 0.415), rgba(232, 232, 242, 0.472));
 }
 
 .conteiner {
+  /* esse é a barra de navegação */
   width: 100vw;
-  height: 100vh;
+  height: 13vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 nav {
+  /* tag nav do html */
   display: flex;
+  align-items: center;
   justify-content: space-between;
   margin: 1vh;
 }
 
 .my-image-logo-bombeiro {
+  /* imagem polo na barra de navegação */
   position: static;
   height: 10vh;
-  margin-left: 1vh;
+  margin: 1vh;
   cursor: pointer;
 }
 
 .caixa-ul-nav {
+  /* caixa por fora dos links */
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .caixa-link-li-nomes {
+  /* div dentro da caixa  ul 'links' */
   display: flex;
   align-items: center;
-  gap: 5vh;
+  gap: 8vh;
   margin-right: 5vh;
   list-style-type: none;
-  
+
   color: #d10b0b;
   font-weight: bold;
-  font-size: 2.8vh;
-
-}
-
-.linkCurso{
-  cursor: pointer;
+  font-size: 3vh;
 }
 
 nav ul li a {
+  /* links 'nomes'' */
   text-decoration: none;
   text-transform: uppercase;
   color: #d10b0b;
 }
 
 nav ul li a:hover {
+  /* hover dos links navegação */
   color: black;
   transition: 0.5s;
 }
 
 nav ul li a:active {
+  /* active dos links navegação */
   opacity: .5;
   color: red;
 }
 
 .tag-button-nav {
+  /* butão no menu navegação */
   border: none;
   background: linear-gradient(rgb(196, 11, 5), rgb(207, 123, 33));
   color: white;
   cursor: pointer;
-  font-size: 2.5vh;
+  font-size: 2.6vh;
   width: 19vw;
   height: 10vh;
   border-radius: 40px;
@@ -83,62 +92,76 @@ nav ul li a:active {
 }
 
 .tag-button-nav:hover {
+  /* hover do butão navegação */
   background: linear-gradient(rgb(11, 10, 10), rgb(11, 10, 10));
   transition: 1s;
 }
 
 .tag-button-nav:active {
+  /* active do butão navegação */
   opacity: .8;
 }
 
 .image-icon-traco {
+  /*  imagem de traço utilizado na responsividade */
   display: none;
 }
 
 hr {
+  /* traço para dividir o menu navegação e a pagina main */
   border: 0.1 solid;
   margin-top: 1em;
-  margin-bottom: 1em;
   box-shadow: 5px 0px 5px;
 }
 
 main {
+  /* tag main  */
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  margin-top: 3vh;
+  justify-content: center;
+  padding-top: 3vh;
 }
 
 .text-bpc {
+  /* caixa de tudo com palavras de infomações  */
+  width: 65%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 0.2vw;
-  gap: 2vh;
+  justify-items: center;
+  background-color: #d10b99;
 }
 
 .text-h1 {
+  /* texto h1 dentro da main  */
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
-  font-size: 6vh;
+  font-size: 5.5vh;
   font-weight: bold;
 }
 
 .text-bpc-red {
+  /* span texto red dentro do h1  */
   color: #ed0909;
   font-weight: bold;
 }
 
 .text-h2 {
+  /* texto h2 dentro da main  */
   display: flex;
   flex-direction: row;
   align-items: center;
   font-weight: 300;
   font-size: 2.8vh;
-  margin: 20px 0;
   letter-spacing: 1px;
 }
 
 .text-h3 {
+  /* texto h3 dentro dentro da main  */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -147,25 +170,23 @@ main {
 }
 
 .paragrafy-main {
-  width: 50vw;
+  /* paragrafo dentro da main  */
+  width: 98%;
   display: flex;
   text-align: center;
   font-size: 2.5vh;
   font-weight: 300;
-  padding: 0vh 2vh;
 }
 
-.div-btn-matricula {
-  width: 50vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.button-main {
+  /* div butão dentro da main  */
+  margin-bottom: 5vh;
 }
 
 .btn-main {
+  /* butão dentro da main  */
   width: 30vw;
   height: 8vh;
-  margin: 20px auto;
   font-size: 3vh;
   font-weight: 700;
   border: none;
@@ -177,11 +198,13 @@ main {
 }
 
 .btn-main:hover {
+  /* butão hover main  */
   background-color: rgba(0, 0, 0, 0.631);
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 .btn-main:active {
+  /* butao active main  */
   opacity: 0.5;
 }
 
@@ -189,7 +212,6 @@ main {
   display: flex;
   flex-direction: row;
   gap: 10vh;
-  margin-top: 3vh;
 }
 
 .logo-rede-sociais {
@@ -380,7 +402,7 @@ footer {
   margin-top: 10vh;
 }
 
-@media screen and (max-width:1080px) {
+@media screen and (max-width:892px) {
   .conteiner {
     width: 100vw;
     height: 100vh;
