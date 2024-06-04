@@ -1,0 +1,133 @@
+
+
+
+
+/* ---- Local curso ----- */
+.local-curso {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1vh;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .paragrafo-informacao-localizacao {
+    font-size: 4vh;
+    font-weight: 800;
+  }
+  
+  .div-img-mapas {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2em;
+  }
+  
+  #localizacao-curicica,
+  #localizacao-bangu {
+    font-size: 3vh;
+    font-weight: 300;
+    margin-top: 2vh;
+  }
+  
+  .class-iframe-mapa {
+    width: 30vw;
+    height: 30vh;
+  }
+  
+  .mapa-curicica {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+  
+  .mapa-bangu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    margin-left: 1em;
+  }
+  
+  .paragraph-contato-curicica,
+  .paragraph-contato-bangu {
+    font-size: 3vh;
+  }
+  
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4vh;
+    font-size: 2.5vh;
+    font-weight: 200;
+    margin-top: 5%;
+    padding-bottom: 4vh;
+    text-align: center;
+  }
+  
+  .img-logo-bpc-footer {
+    height: 20vh;
+    margin-top: 10vh;
+  }
+
+  @media screen and (max-width:892px) {
+
+
+
+    /* localiização */
+    .local-curso {
+        display: block;
+        margin: 0;
+        padding: 0;
+        height: 85vh;
+      }
+    
+      .paragrafo-informacao-localizacao {
+        font-size: 4vh;
+        font-weight: 800;
+        margin-top: 8vh;
+      }
+    
+      .div-img-mapas {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2em;
+      }
+    
+      .class-iframe-mapa {
+        width: 30vw;
+        height: 15vh;
+      }
+    
+      #localizacao-bangu {
+        font-weight: 300;
+        margin-top: 13vh;
+      }
+    
+      .paragraph-contato-curicica,
+      .paragraph-contato-bangu {
+        font-size: 2vh;
+        padding: 0 1px;
+      }
+    
+      footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4vh;
+        font-size: 2vh;
+        font-weight: 200;
+        text-align: center;
+        padding: 0 4vh;
+        padding-bottom: 4vh;
+      }
+    
+      .img-logo-bpc-footer {
+        height: 12vh;
+        margin-top: 12vh;
+      }
+    }

@@ -11,6 +11,8 @@
 body {
   /* pagina toda!!! */
   background-color: linear-gradient(rgba(250, 249, 249, 0.415), rgba(232, 232, 242, 0.472));
+  width: 100vw;
+  height: 100vh;
 }
 
 .conteiner {
@@ -117,21 +119,22 @@ hr {
 main {
   /* tag main  */
   width: 100vw;
-  height: 100vh;
+  height: 85vh;
   display: flex;
-  justify-content: center;
   padding-top: 3vh;
+  overflow: hidden;
+
 }
 
 .text-bpc {
   /* caixa de tudo com palavras de infomações  */
   width: 65%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  background-color: #d10b99;
+  gap: 2vh;
 }
 
 .text-h1 {
@@ -176,6 +179,7 @@ main {
   text-align: center;
   font-size: 2.5vh;
   font-weight: 300;
+  padding: 0 15%;
 }
 
 .button-main {
@@ -211,7 +215,7 @@ main {
 .div-medias-sociais {
   display: flex;
   flex-direction: row;
-  gap: 10vh;
+  gap: 8vh;
 }
 
 .logo-rede-sociais {
@@ -233,19 +237,19 @@ aqui config que so
 aparece a imagem do tamanho 
 colocado
 */
-.slider {
-  margin: 30px auto;
-  width: 900px;
-  height: 650px;
+.slider { /* aqui é o quadrado que eu quero que aparaceça */
+  margin: 4vh auto;
+  width: 500px;  /* aqui tem que ser em px, porque vai ser um quadrado fixo */
+  height: 500px;
   overflow: hidden;
 }
 
 
-.div-img-bpc-fogo {
+.div-img-bpc-fogo { /*caixa onde fica tudo das imagens /*
   /*slides*/
   width: 400%;
-  height: 400px;
   display: flex;
+  margin-top: 3vh;
 }
 
 .div-img-bpc-fogo input {
@@ -261,37 +265,39 @@ colocado
 /* aqui dei um nome para img, mas nao precisava
 era somente dar um espaço utilizar a classe da div
 e coloca a tag img -> slide img{} */
-.slide img {
-  width: 45vw;
-  height: 55vh;
+
+#id-img-1-slide { /*tamanho da imagem 1 */
+  width: 93%;
+  height: 75%;
   border-radius: 30px;
-  margin-left: 50px;
+  margin-left: 1vh;
 }
 
-#id-img-2-slide {
-  width: 38vw;
-  height: 61vh;
-  margin-left: 90px;
+#id-img-2-slide {/*tamanho da imagem 2 */
+  width: 86%;
+  height: 85%;
+  margin-left: 3vh;
+  border-radius: 20px;
 }
 
-#id-img-3-slide {
-  width: 35vw;
-  height: 65vh;
-  margin-left: 15vh;
+#id-img-3-slide { /*tamanho da imagem 3 */
+  width: 86%;
+  height: 85%;
+  margin-left: 3vh;
+  border-radius: 20px;
 }
 
-#id-img-4-slide {
-  width: 35vw;
-  height: 64vh;
-  margin-left: 15vh;
+#id-img-4-slide {  /*tamanho da imagem 4 */
+  width: 86%;
+  height: 85%;
+  margin-left: 3vh;
+  border-radius: 20px;
 }
 
 /* aqui config botao*/
-.manual-navigation {
+.manual-navigation { /* bolinhas de selecionar em cima das imagens*/
   position: absolute;
-  width: 800px;
-  margin-top: -37px;
-  margin-left: 5vh;
+  margin: -5.5vh 0 0 17vh;
   display: flex;
   justify-content: center;
   gap: 2vh;
@@ -328,78 +334,6 @@ e coloca a tag img -> slide img{} */
 
 #radio4:checked~.first {
   margin-left: -75%;
-}
-
-
-
-.local-curso {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  margin-top: 1vh;
-  width: 100vw;
-  height: 100vh;
-}
-
-.paragrafo-informacao-localizacao {
-  font-size: 4vh;
-  font-weight: 800;
-}
-
-.div-img-mapas {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 2em;
-}
-
-#localizacao-curicica,
-#localizacao-bangu {
-  font-size: 3vh;
-  font-weight: 300;
-  margin-top: 2vh;
-}
-
-.class-iframe-mapa {
-  width: 30vw;
-  height: 30vh;
-}
-
-.mapa-curicica {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1em;
-}
-
-.mapa-bangu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1em;
-  margin-left: 1em;
-}
-
-.paragraph-contato-curicica,
-.paragraph-contato-bangu {
-  font-size: 3vh;
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4vh;
-  font-size: 2.5vh;
-  font-weight: 200;
-  margin-top: 5%;
-  padding-bottom: 4vh;
-  text-align: center;
-}
-
-.img-logo-bpc-footer {
-  height: 20vh;
-  margin-top: 10vh;
 }
 
 @media screen and (max-width:892px) {
@@ -591,58 +525,5 @@ e coloca a tag img -> slide img{} */
     gap: 5vh;
     margin: 0;
     /* margin-top: 3vh; */
-  }
-
-  .local-curso {
-    display: block;
-    margin: 0;
-    padding: 0;
-    height: 85vh;
-  }
-
-  .paragrafo-informacao-localizacao {
-    font-size: 4vh;
-    font-weight: 800;
-    margin-top: 8vh;
-  }
-
-  .div-img-mapas {
-    display: flex;
-    flex-direction: column;
-    margin-top: 2em;
-  }
-
-  .class-iframe-mapa {
-    width: 30vw;
-    height: 15vh;
-  }
-
-  #localizacao-bangu {
-    font-weight: 300;
-    margin-top: 13vh;
-  }
-
-  .paragraph-contato-curicica,
-  .paragraph-contato-bangu {
-    font-size: 2vh;
-    padding: 0 1px;
-  }
-
-  footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 4vh;
-    font-size: 2vh;
-    font-weight: 200;
-    text-align: center;
-    padding: 0 4vh;
-    padding-bottom: 4vh;
-  }
-
-  .img-logo-bpc-footer {
-    height: 12vh;
-    margin-top: 12vh;
   }
 }
