@@ -1,14 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;500&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  background-color: linear-gradient(rgba(250, 249, 249, 0.415), rgba(232, 232, 242, 0.472));
 }
 
-hr{
-    padding: 0;
-    margin: 0;
-    margin-bottom: 0.2vh;
+body {
+  /* pagina toda!!! */
+  background-color: linear-gradient(rgba(250, 249, 249, 0.415), rgba(232, 232, 242, 0.472));
+  width: 100vw;
+  height: 100vh;
 }
+
+.conteiner {
+  /* esse é a barra de navegação */
+  width: 100vw;
+  height: 13vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+nav {
+  /* tag nav do html */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1vh;
+}
+
+.my-image-logo-bombeiro {
+  /* imagem polo na barra de navegação */
+  position: static;
+  height: 10vh;
+  margin: 1vh;
+  cursor: pointer;
+}
+
+.caixa-ul-nav {
+  /* caixa por fora dos links */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.caixa-link-li-nomes {
+  /* div dentro da caixa  ul 'links' */
+  display: flex;
+  align-items: center;
+  gap: 8vh;
+  margin-right: 5vh;
+  list-style-type: none;
+
+  color: #d10b0b;
+  font-weight: bold;
+  font-size: 3vh;
+}
+
+nav ul li a {
+  /* links 'nomes'' */
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #d10b0b;
+}
+
+nav ul li a:hover {
+  /* hover dos links navegação */
+  color: black;
+  transition: 0.5s;
+}
+
+nav ul li a:active {
+  /* active dos links navegação */
+  opacity: .5;
+  color: red;
+}
+
+.tag-button-nav {
+  /* butão no menu navegação */
+  border: none;
+  background: linear-gradient(rgb(196, 11, 5), rgb(207, 123, 33));
+  color: white;
+  cursor: pointer;
+  font-size: 2.6vh;
+  width: 19vw;
+  height: 10vh;
+  border-radius: 40px;
+  font-weight: 800;
+  margin-right: 3vw;
+}
+
+.tag-button-nav:hover {
+  /* hover do butão navegação */
+  background: linear-gradient(rgb(11, 10, 10), rgb(11, 10, 10));
+  transition: 1s;
+}
+
+.tag-button-nav:active {
+  /* active do butão navegação */
+  opacity: .8;
+}
+
+.image-icon-traco {
+  /*  imagem de traço utilizado na responsividade */
+  display: none;
+}
+
+hr {
+  /* traço para dividir o menu navegação e a pagina main */
+  border: 0.1 solid;
+  margin-top: 1em;
+  box-shadow: 5px 0px 5px;
+}
+
 main {
     display: flex;
     justify-content: center;

@@ -1,5 +1,5 @@
 const menuOptions = [
-    { name: 'Bombeiro Civil', price: 1300, src: './asset-img-cursos/logobpccurso.png' },
+    { name: 'Bombeiro Civil', price: 1300, src:'./asset-img-cursos/logobpccurso.png' },
     { name: 'APH Avançado', price: 800, src: './asset-img-cursos/logoAphcurso.jpg' },
     { name: 'Stop The Bleed', price: 80, src: './asset-img-cursos/logostopthebleedcurso.png' },
     { name: 'Grandes Eventos', price: 50, src:'./asset-img-cursos/logograndeseventoscurso.jpg' },
