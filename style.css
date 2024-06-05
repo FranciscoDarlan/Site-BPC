@@ -336,6 +336,29 @@ e coloca a tag img -> slide img{} */
   margin-left: -75%;
 }
 
+.navigation-auto div{
+  border: 2px solid blue;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.navigation-auto{
+  position: absolute;
+  margin: -5.5vh 0 0 17vh;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 53.5px;
+}
+
+#radio1:checked~.navigation-auto .auto-btn1{
+  background-color: #0b0b0b;
+}
+
 @media screen and (max-width:892px) {
   .conteiner {
     width: 100vw;
