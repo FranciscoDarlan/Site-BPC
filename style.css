@@ -18,7 +18,7 @@ body {
 .conteiner {
   /* esse é a barra de navegação */
   width: 100vw;
-  height: 13vh;
+  height: 15%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -237,15 +237,18 @@ aqui config que so
 aparece a imagem do tamanho 
 colocado
 */
-.slider { /* aqui é o quadrado que eu quero que aparaceça */
+.slider {
+  /* aqui é o quadrado que eu quero que aparaceça */
   margin: 4vh auto;
-  width: 500px;  /* aqui tem que ser em px, porque vai ser um quadrado fixo */
+  width: 500px;
+  /* aqui tem que ser em px, porque vai ser um quadrado fixo */
   height: 500px;
   overflow: hidden;
 }
 
 
-.div-img-bpc-fogo { /*caixa onde fica tudo das imagens /*
+.div-img-bpc-fogo {
+  /*caixa onde fica tudo das imagens /*
   /*slides*/
   width: 400%;
   display: flex;
@@ -268,28 +271,32 @@ colocado
 era somente dar um espaço utilizar a classe da div
 e coloca a tag img -> slide img{} */
 
-#id-img-1-slide { /*tamanho da imagem 1 */
+#id-img-1-slide {
+  /*tamanho da imagem 1 */
   width: 93%;
   height: 75%;
   border-radius: 30px;
   margin-left: 1vh;
 }
 
-#id-img-2-slide {/*tamanho da imagem 2 */
+#id-img-2-slide {
+  /*tamanho da imagem 2 */
   width: 86%;
   height: 85%;
   margin-left: 3vh;
   border-radius: 20px;
 }
 
-#id-img-3-slide { /*tamanho da imagem 3 */
+#id-img-3-slide {
+  /*tamanho da imagem 3 */
   width: 86%;
   height: 85%;
   margin-left: 3vh;
   border-radius: 20px;
 }
 
-#id-img-4-slide {  /*tamanho da imagem 4 */
+#id-img-4-slide {
+  /*tamanho da imagem 4 */
   width: 86%;
   height: 85%;
   margin-left: 3vh;
@@ -297,7 +304,8 @@ e coloca a tag img -> slide img{} */
 }
 
 /* aqui config botao*/
-.manual-navigation { /* bolinhas de selecionar em cima das imagens*/
+.manual-navigation {
+  /* bolinhas de selecionar em cima das imagens*/
   position: absolute;
   margin: -5.5vh 0 0 17vh;
   display: flex;
@@ -311,7 +319,7 @@ e coloca a tag img -> slide img{} */
   border-radius: 10px;
   cursor: pointer;
   transition: 1s;
-  opacity: 0;  
+  opacity: 0;
   background-color: rgb(248, 241, 241);
 }
 
@@ -339,7 +347,7 @@ e coloca a tag img -> slide img{} */
   margin-left: -75%;
 }
 
-.navigation-auto div{
+.navigation-auto div {
   border: 2px solid black;
   padding: 5px;
   border-radius: 10px;
@@ -347,7 +355,7 @@ e coloca a tag img -> slide img{} */
   transition: 1s;
 }
 
-.navigation-auto{
+.navigation-auto {
   position: absolute;
   margin: -5.5vh 0 0 17vh;
   display: flex;
@@ -358,34 +366,45 @@ e coloca a tag img -> slide img{} */
   margin-right: 53.5px;
 }
 
-#radio1:checked~.navigation-auto .auto-btn1{
+#radio1:checked~.navigation-auto .auto-btn1 {
   background-color: #0b0b0b;
 }
 
-#radio2:checked~.navigation-auto .auto-btn2{
+#radio2:checked~.navigation-auto .auto-btn2 {
   background-color: #0b0b0b;
 }
 
-#radio3:checked~.navigation-auto .auto-btn3{
+#radio3:checked~.navigation-auto .auto-btn3 {
   background-color: #0b0b0b;
 }
 
-#radio4:checked~.navigation-auto .auto-btn4{
+#radio4:checked~.navigation-auto .auto-btn4 {
   background-color: #0b0b0b;
 }
 
 @media screen and (max-width:892px) {
   .conteiner {
+    /* esse é a barra de navegação */
     width: 100vw;
-    height: 100vh;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   nav {
+    margin: 0 0;
     width: 100vw;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
   }
+
+  .image-icon-traco {
+    margin: 0;
+  }
+
+
 
   /*
 aqui config que so 
@@ -495,7 +514,8 @@ e coloca a tag img -> slide img{} */
 
   .image-icon-traco {
     display: flex;
-    width: 6vh;
+    background-color: rgba(219, 217, 217, 0.767);
+    width: 10vh;
     cursor: pointer;
   }
 
@@ -504,34 +524,38 @@ e coloca a tag img -> slide img{} */
   }
 
   main {
+    display: flex;
     flex-direction: column-reverse;
   }
 
   .text-bpc {
-    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
   }
 
   .text-h1 {
+    display: flex;
+    justify-content: center;
     font-size: 4vh;
   }
 
   .text-h2 {
-    font-size: 2vh;
+    display: flex;
+    justify-content: center;
   }
 
   .text-h3 {
-    font-size: 2vh;
+    display: flex;
+    align-items: center;
   }
 
   .paragrafy-main {
-    width: 80vw;
+    width: 92vw;
     font-size: 2vh;
-    margin-top: 1vh;
-    padding: 0px
-  }
-
-  .div-btn-matricula {
-    margin: 2vh 5vh 0vh 0vh;
+    margin-top: 0.5vh;
+    padding: 0vh;
   }
 
   .btn-main {
@@ -554,14 +578,13 @@ e coloca a tag img -> slide img{} */
 
   .btn-main:active {
     opacity: 0.5;
-
   }
 
   .div-medias-sociais {
     display: flex;
     flex-direction: row;
-    gap: 5vh;
-    margin: 0;
+    gap: 1vh;
+    margin: 0 0 2vh 0;
     /* margin-top: 3vh; */
   }
 }
