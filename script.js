@@ -1,32 +1,18 @@
-var menu = document.querySelector('nav ul');
-var menuBar = document.querySelector('nav .menu-icon');
-var iconMenu = document.querySelector('nav .menu-icon img');
-var linkSimulador = document.querySelector('classeSimulador');
+// console.log('estou funcionando')
 
-let linkIndexCurso = document.querySelector('.linkCurso');
-
-function paginaDeCurso() {
-    window.location.href = "index-cursos.html";
-}
-
-menuBar.addEventListener('click', function () {
-    menu.classList.toggle('active');
-});
-
-
-// TROCA DAS IMAGENS CURSOS
+//TROCA DAS IMAGENS CURSOS
 let count = 1;
-document.getElementById('radio1').checked = true;
+document.getElementById("radio1").checked = true; // inicia a 1° imagem já com input radio marcado!!
 
-setInterval( function() {
+setInterval(function () {  // faz a função durante o tempo colocado no final
     nextImage();
-}, 1000);
+}, 3000);
 
-function nextImage() {
-    count++;
-    if (count > 4) {
+function nextImage() { // função proxima imagem
+    count++; // acrescendta mais1
+    if (count > 4) { // condição
         count = 1;
     }
-    document.getElementById("radio"+count).checked = true;
+    document.getElementById("radio" + count).checked = true;
 }
 

@@ -255,11 +255,13 @@ colocado
 .div-img-bpc-fogo input {
   /*slides com input*/
   display: none;
+  transition: 1s;
 }
 
 .slide {
   width: 25%;
   position: relative;
+  transition: 1s;
 }
 
 /* aqui dei um nome para img, mas nao precisava
@@ -309,6 +311,7 @@ e coloca a tag img -> slide img{} */
   border-radius: 10px;
   cursor: pointer;
   transition: 1s;
+  opacity: 0;  
   background-color: rgb(248, 241, 241);
 }
 
@@ -337,7 +340,7 @@ e coloca a tag img -> slide img{} */
 }
 
 .navigation-auto div{
-  border: 2px solid blue;
+  border: 2px solid black;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
@@ -356,6 +359,18 @@ e coloca a tag img -> slide img{} */
 }
 
 #radio1:checked~.navigation-auto .auto-btn1{
+  background-color: #0b0b0b;
+}
+
+#radio2:checked~.navigation-auto .auto-btn2{
+  background-color: #0b0b0b;
+}
+
+#radio3:checked~.navigation-auto .auto-btn3{
+  background-color: #0b0b0b;
+}
+
+#radio4:checked~.navigation-auto .auto-btn4{
   background-color: #0b0b0b;
 }
 
