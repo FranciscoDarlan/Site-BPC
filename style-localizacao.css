@@ -173,6 +173,9 @@ footer {
 @media screen and (max-width:892px) {
 
 
+  .tag-button-nav{
+    display: none;
+  }
 
   /* localiização */
   .local-curso {

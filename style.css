@@ -383,150 +383,130 @@ e coloca a tag img -> slide img{} */
 }
 
 @media screen and (max-width:892px) {
+
+  body {
+    /* pagina toda!!! */
+    background-color: linear-gradient(rgba(250, 249, 249, 0.415), rgba(232, 232, 242, 0.472));
+    width: 100vw;
+    height: 100vh;
+  }
+
   .conteiner {
     /* esse é a barra de navegação */
     width: 100vw;
-    height: 15%;
+    height: 12%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 
   nav {
-    margin: 0 0;
-    width: 100vw;
+    /* tag nav do html */
     display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 0vh;
+    padding: 0;
   }
 
-  .image-icon-traco {
-    margin: 0;
-  }
-
-
-
-  /*
-aqui config que so 
-aparece a imagem do tamanho 
-colocado @MEDIA SCREEN
-*/
-  .slider {
-    margin: 30px auto;
-    width: 800px;
-    height: 400px;
-    overflow: hidden;
-  }
-
-
-
-  .div-img-bpc-fogo input {
-    /*slides com input*/
-    display: none;
-  }
-
-  .slide {
-    width: 25%;
-    position: relative;
-  }
-
-  /* aqui dei um nome para img, mas nao precisava
-era somente dar um espaço utilizar a classe da div
-e coloca a tag img -> slide img{} */
-  .slide img {
-    width: 90vw;
-    height: 44vh;
-    border-radius: 14px;
-    margin-top: 1vh;
-    margin-left: 3vh;
-
-  }
-
-  #id-img-2-slide {
-    width: 93vw;
-    height: 55vh;
-    margin-left: 2vh;
-
-  }
-
-  #id-img-3-slide {
-    width: 86vw;
-    height: 53vh;
-    margin-left: 5vh;
-  }
-
-  #id-img-4-slide {
-    width: 86vw;
-    height: 53vh;
-    margin-left: 5vh;
-  }
-
-  /* aqui config botao*/
-  .manual-navigation {
-    display: flex;
-    position: absolute;
-    width: 100vw;
-    margin-top: -37px;
-    margin-left: 0;
-    gap: 2vh;
-  }
-
-  .manual-btn {
-    border: 2px solid #0b0b0b;
-    padding: 5px;
-    border-radius: 10px;
+  .my-image-logo-bombeiro {
+    /* imagem polo na barra de navegação */
+    position: static;
+    height: 10vh;
+    margin: 1vh;
     cursor: pointer;
-    transition: 1s;
-    background-color: rgb(248, 241, 241);
-  }
-
-  .manual-btn:not(:last-child) {
-    margin-right: 40px;
-  }
-
-  .manual-btn:hover {
-    background-color: rgb(255, 0, 0);
-  }
-
-  #radio1:checked~.first {
-    margin-left: 0;
-  }
-
-  #radio2:checked~.first {
-    margin-left: -25%;
-  }
-
-  #radio3:checked~.first {
-    margin-left: -50%;
-  }
-
-  #radio4:checked~.first {
-    margin-left: -75%;
   }
 
   .caixa-ul-nav {
-    display: none;
+    /* caixa por fora dos links */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .caixa-link-li-nomes {
+    /* div dentro da caixa  ul 'links' */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+
+    gap: 6%;
+  }
+
+  nav ul li a {
+    /* links 'nomes'' */
+    font-size: 100%;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #d10b0b;
+    align-content: flex-end;
+    font-size: 90%;
+  }
+
+  nav ul li a:hover {
+    /* hover dos links navegação */
+    color: black;
+    transition: 0.8s;
+    font-size: 108%;
+
+    font-style: bold;
+  }
+
+  nav ul li a:active {
+    /* active dos links navegação */
+    opacity: .5;
+    color: red;
   }
 
   .tag-button-nav {
+    /* butão no menu navegação */
+    border: none;
+    background: linear-gradient(rgb(196, 11, 5), rgb(207, 123, 33));
+    color: white;
+    cursor: pointer;
+    font-size: 2.6vh;
+    width: 19vw;
+    height: 10vh;
+    border-radius: 40px;
+    font-weight: 800;
+    margin-right: 3vw;
     display: none;
   }
 
+  .tag-button-nav:hover {
+    /* hover do butão navegação */
+    background: linear-gradient(rgb(11, 10, 10), rgb(11, 10, 10));
+    transition: 1s;
+  }
+
+  .tag-button-nav:active {
+    /* active do butão navegação */
+    opacity: .8;
+  }
+
   .image-icon-traco {
-    display: flex;
-    background-color: rgba(219, 217, 217, 0.767);
-    width: 10vh;
-    cursor: pointer;
+    /*  imagem de traço utilizado na responsividade */
+    display: none;
   }
 
   hr {
+    /* traço para dividir o menu navegação e a pagina main */
+    border: 0.1 solid;
+    margin-top: 1em;
+    box-shadow: 5px 0px 5px;
     display: none;
   }
 
   main {
-    display: flex;
-    flex-direction: column-reverse;
+    /* tag main  */
+    height: auto;
+    flex-wrap: wrap-reverse;
   }
+
+
+
+  /* trocado pela configuração antiga */
 
   .text-bpc {
     display: flex;
@@ -586,5 +566,169 @@ e coloca a tag img -> slide img{} */
     gap: 1vh;
     margin: 0 0 2vh 0;
     /* margin-top: 3vh; */
+  }
+
+
+
+
+  /* aqui começa a imagem */
+
+
+
+  /*
+  aqui config que so 
+  aparece a imagem do tamanho 
+  colocado
+  */
+  .slider {
+    /* aqui é o quadrado que eu quero que aparaceça */
+    margin: 2vh auto;
+    width: 359px;
+    /* aqui tem que ser em px, porque vai ser um quadrado fixo */
+    height: 364px;
+    overflow: hidden;
+  }
+
+
+  .div-img-bpc-fogo {
+    /*caixa onde fica tudo das imagens /*
+    /*slides*/
+    width: 400%;
+    display: flex;
+    margin-top: 3vh;
+    margin-bottom: 100vh;
+  }
+
+  .div-img-bpc-fogo input {
+    /*slides com input*/
+    display: none;
+    transition: 1s;
+  }
+
+  .slide {
+    width: 25%;
+    position: relative;
+    transition: 1s;
+  }
+
+  /* aqui dei um nome para img, mas nao precisava
+  era somente dar um espaço utilizar a classe da div
+  e coloca a tag img -> slide img{} */
+
+  #id-img-1-slide {
+    /*tamanho da imagem 1 */
+    width: 93%;
+    height: 75%;
+    border-radius: 30px;
+    margin-left: 1vh;
+  }
+
+  #id-img-2-slide {
+    /*tamanho da imagem 2 */
+    width: 86%;
+    height: 85%;
+    margin-left: 3vh;
+    border-radius: 20px;
+  }
+
+  #id-img-3-slide {
+    /*tamanho da imagem 3 */
+    width: 86%;
+    height: 85%;
+    margin-left: 3vh;
+    border-radius: 20px;
+  }
+
+  #id-img-4-slide {
+    /*tamanho da imagem 4 */
+    width: 86%;
+    height: 85%;
+    margin-left: 3vh;
+    border-radius: 20px;
+  }
+
+  /* aqui config botao*/
+  .manual-navigation {
+    /* bolinhas de selecionar manual invisivel em cima das imagens*/
+    position: absolute;
+    gap: none;
+    margin: -6.5vh 0px 0px 9vh;
+    /* background-color: pink; caso queira ver */
+  }
+
+  .manual-btn {
+    border: 2px solid #0b0b0b;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    opacity: 0;
+    background-color: rgb(231, 5, 5);
+  }
+
+  .manual-btn:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  .manual-btn:hover {
+    background-color: rgb(255, 0, 0);
+  }
+
+  #radio1:checked~.first {
+    margin-left: 0;
+  }
+
+  #radio2:checked~.first {
+    margin-left: -25%;
+  }
+
+  #radio3:checked~.first {
+    margin-left: -50%;
+  }
+
+  #radio4:checked~.first {
+    margin-left: -75%;
+  }
+
+  /* bolinha que passa sozinho */
+  .navigation-auto div {
+    width: 1%;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+
+  /* esse bolinha que passa sozinho posicionamento*/
+  .navigation-auto {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: -6.5vh 0px 0px 9vh;
+
+  }
+
+  /* distancia das bolinhas pretas passando sozinho */
+  .navigation-auto div:not(:last-child) {
+    justify-content: space-between;
+  }
+
+  #radio1:checked~.navigation-auto .auto-btn1 {
+    background-color: #0b0b0b;
+  }
+
+  #radio2:checked~.navigation-auto .auto-btn2 {
+    background-color: #0b0b0b;
+  }
+
+  #radio3:checked~.navigation-auto .auto-btn3 {
+    background-color: #0b0b0b;
+  }
+
+  #radio4:checked~.navigation-auto .auto-btn4 {
+    background-color: #0b0b0b;
   }
 }
