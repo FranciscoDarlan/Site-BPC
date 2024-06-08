@@ -397,10 +397,11 @@ button:active {
   opacity: 0.5;
 }
 
+
 .div-cardapio-complet {
   display: grid;
   grid-template-columns: 20vh 20vh 20vh 20vh;
-  gap: 5vh;
+  gap: 2vh;
 }
 
 .cardapio-individual {
@@ -418,7 +419,6 @@ img {
   width: 700%;
   height: 100%;
 }
-
 .my-image-logo-bombeiro {
   width: 17vh;
   height: 15vh;

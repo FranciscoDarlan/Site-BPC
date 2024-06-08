@@ -702,7 +702,7 @@ e coloca a tag img -> slide img{} */
 
   /* esse bolinha que passa sozinho posicionamento*/
   .navigation-auto {
-    position: fixed;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
