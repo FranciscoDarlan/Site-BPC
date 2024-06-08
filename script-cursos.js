@@ -13,7 +13,7 @@ function MostrarTudoForEath() {
   <img src=${produt.src} alt="imagem-comida">
   <p>${produt.name}</p>
   <p>R$R$${produt.price}</p>
-  <a class="buttonComprarLanche" onclick="compraLanche()">COMPRAR</a>
+  <a href="http://wa.me/5521970042950?text=+Olá, estou vindo pelo site e gostaria de saber mais sobre as NR's!" class="buttonComprarLanche">COMPRAR</a>
 </div>
 `
   })

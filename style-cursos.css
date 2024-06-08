@@ -247,7 +247,7 @@ p {
   .my-image-logo-bombeiro {
     /* imagem polo na barra de navegação */
     position: static;
-    width: 35%;
+    width: 55%;
     height: 1%;
     cursor: pointer;
   }
@@ -265,7 +265,7 @@ p {
     display: flex;
     justify-content: center;
     justify-content: center;
-    gap: 30%;
+    gap: 13%;
   }
 
   nav ul li a {
@@ -341,11 +341,12 @@ main {
 
 .div-projeto-todo {
   width: 100vw;
+
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 7vh;
-  padding-bottom: 25vh;
+  padding-bottom: 130vh;
   background-color: #242121ee;
 
 }
@@ -357,7 +358,7 @@ header {
 
 h1 {
   text-align: center;
-  font-size: 6vh;
+  font-size: 240%;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin-bottom: 10px;
 }
@@ -367,16 +368,16 @@ article {
 }
 
 .div-buttons {
-  display: flex;
-  justify-content: center;
-  margin: 0px;
-  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  margin: 0;
 }
 
 button {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+
   background-color: #79cb15;
   border: none;
   border-radius: 5px;
@@ -384,9 +385,10 @@ button {
   cursor: pointer;
   font-weight: bold;
   font-size: 2.5vh;
-  width: 15%;
-  height: 15vh;
-  margin-right: 5%;
+  width: 20%;
+  height: 13vh;
+  padding: 0;
+  margin: 0;
 }
 
 button:hover {
@@ -397,11 +399,10 @@ button:active {
   opacity: 0.5;
 }
 
-
 .div-cardapio-complet {
   display: grid;
-  grid-template-columns: 20vh 20vh 20vh 20vh;
-  gap: 2vh;
+  grid-template-columns: 20vh 20vh;
+  gap: 5vh;
 }
 
 .cardapio-individual {
@@ -410,20 +411,14 @@ button:active {
   justify-content: center;
   align-items: center;
   border: 2px solid #ffff;
-  padding: 25px 90px;
+  padding: 5% 10%;
   border-radius: 12px;
   margin-top: 3vh;
 }
 
 img {
-  width: 700%;
-  height: 100%;
-}
-.my-image-logo-bombeiro {
-  width: 17vh;
-  height: 15vh;
-  margin-left: 1vh;
-  cursor: pointer;
+  width: 100%;
+  height: 50%;
 }
 
 p {
