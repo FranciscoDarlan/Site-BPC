@@ -32,9 +32,13 @@ nav {
   margin: 1vh;
 }
 
+.nav-responsiva {
+  display: none;
+}
+
 .my-image-logo-bombeiro {
   /* imagem polo na barra de navegação */
-  position: static;
+  display: flex;
   height: 10vh;
   margin: 1vh;
   cursor: pointer;
@@ -45,6 +49,10 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.ul-menu-responsivo {
+  display: none;
 }
 
 .caixa-link-li-nomes {
@@ -382,7 +390,7 @@ e coloca a tag img -> slide img{} */
   background-color: #0b0b0b;
 }
 
-@media screen and (max-width:892px) {
+@media screen and (max-width:990px) {
 
   body {
     /* pagina toda!!! */
@@ -397,14 +405,29 @@ e coloca a tag img -> slide img{} */
     height: 12%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    flex-direction: row;
   }
 
   nav {
     /* tag nav do html */
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    margin: 0vh;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #d10b0b; */
+
+    display: none;
+  }
+
+  .nav-responsiva {
+    /* aqui esta a div nova */
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    margin: 0;
     padding: 0;
   }
 
@@ -423,6 +446,55 @@ e coloca a tag img -> slide img{} */
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
+  }
+
+  /* fora da div container */
+  .ul-menu-responsivo {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 100%;
+    list-style-type: none;
+    background-color: #1f1e1e;
+    text-align: center;
+    transition: 1s;
+    padding: 5vh 0;
+    margin-bottom: 5vh;
+  }
+
+  li a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin-bottom: 3vh;
+    text-transform: uppercase;
+    color: #d10b0b;
+    font-weight: 600;
+  }
+
+  li a:hover {
+    opacity: 0.5;
+  }
+
+  .remove {
+    display: none;
+    transition: 1s;
+  }
+
+  .tag-button-nav-responsivo {
+    /* butão no menu navegação */
+    border: none;
+    background: linear-gradient(rgb(196, 11, 5), rgb(207, 123, 33));
+    color: white;
+    cursor: pointer;
+    font-size: 80%;
+    width: 40%;
+    height: 7vh;
+    border-radius: 10px;
+    font-weight: 800;
+    margin-right: 3vw;
   }
 
   .caixa-link-li-nomes {
@@ -487,7 +559,12 @@ e coloca a tag img -> slide img{} */
 
   .image-icon-traco {
     /*  imagem de traço utilizado na responsividade */
-    display: none;
+    display: flex;
+  }
+
+  .image-icon-traco:active{
+    background-color: #08080849;
+    opacity: .5;
   }
 
   hr {

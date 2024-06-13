@@ -34,7 +34,7 @@ nav {
 
 .my-image-logo-bombeiro {
   /* imagem polo na barra de navegação */
-  position: static;
+  display: flex;
   height: 10vh;
   margin: 1vh;
   cursor: pointer;
