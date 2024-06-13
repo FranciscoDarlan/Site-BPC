@@ -502,7 +502,6 @@ e coloca a tag img -> slide img{} */
     display: flex;
     flex-wrap: wrap;
     justify-content: end;
-
     gap: 6%;
   }
 
@@ -560,6 +559,8 @@ e coloca a tag img -> slide img{} */
   .image-icon-traco {
     /*  imagem de traço utilizado na responsividade */
     display: flex;
+    justify-content: center;
+    width: 100px;
   }
 
   .image-icon-traco:active{
