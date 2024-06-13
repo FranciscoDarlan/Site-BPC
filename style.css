@@ -568,6 +568,11 @@ e coloca a tag img -> slide img{} */
     opacity: .5;
   }
 
+  img.icon {
+    margin-top: 19px;
+    height: 52%;
+  }
+
   hr {
     /* traço para dividir o menu navegação e a pagina main */
     border: 0.1 solid;
