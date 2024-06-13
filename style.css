@@ -559,8 +559,8 @@ e coloca a tag img -> slide img{} */
   .image-icon-traco {
     /*  imagem de traço utilizado na responsividade */
     display: flex;
-    justify-content: center;
-    width: 100px;
+    width: 35%;
+    height: 97%;
   }
 
   .image-icon-traco:active{
