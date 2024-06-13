@@ -561,7 +561,9 @@ e coloca a tag img -> slide img{} */
     display: flex;
     justify-content: center;
     width: 35%;
-    height: 100%;  
+    height: 120%;  
+    margin: 0;
+    padding: 0;
   }
 
   .image-icon-traco:active{
@@ -570,7 +572,7 @@ e coloca a tag img -> slide img{} */
   }
 
   img.icon {
-    margin-top: 19px;
+    margin-top: 10%;
     height: 52%;
   }
 
