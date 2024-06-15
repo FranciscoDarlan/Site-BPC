@@ -9,34 +9,65 @@
 </head>
 
 <body>
-<div class="container">
 
-  <nav>
-    <div>
-      <img class="my-image-logo-bombeiro"
-        src="./asset-img/image_LOGO_instagram_bpc_curicica-bangu-removebg-preview-removebg-preview.png"
-        alt="imagem-logo-polo">
-    </div>
+  <div class="conteiner">
+    <nav>
 
-    <ul class="caixa-ul-nav">
-      <div class="caixa-link-li-nomes">
-        <li><a href="./index.html" onclick="voltaPaginaPrincipal()" class="linkCurso">início</a></li>
-        <li class="classeSimulador"><a href="#">Simulados</a></li>
+      <div>
+        <img class="my-image-logo-bombeiro"
+          src="./asset-img/image_LOGO_instagram_bpc_curicica-bangu-removebg-preview-removebg-preview.png"
+          alt="imagem-logo-polo">
       </div>
-    </ul>
+
+      <ul class="caixa-ul-nav">
+        <div class="caixa-link-li-nomes">
+          <li><a href="./index.html">Início</a></li>
+          <li><a href="#">Simulados</a></li>
+          <li><a href="./equipe.html">Equipe</a></li>
+          <li><a href="./localizacao.html">Localização</a></li>
+        </div>
+      </ul>
+
+      <div>
+        <a href="http://wa.me/5521970042950?text=+Olá, estou vindo pelo site e gostaria de saber mais sobre o curso!"><button
+            class="tag-button-nav">MATRICULE-SE PELO WHATSAPP</button></a>
+      </div>
+
+    </nav>
+
+    <div class="nav-responsiva">
+
+      <div class="div-logo-polo-inicial">
+        <img class="my-image-logo-bombeiro"
+          src="./asset-img/image_LOGO_instagram_bpc_curicica-bangu-removebg-preview-removebg-preview.png"
+          alt="imagem-logo-polo">
+      </div>
+
+      <div class="image-icon-traco">
+        <img class="icon" onclick="imgTraco()" src="./asset-img/menu-removebg-preview.png" alt="imagem-menu">
+      </div>
+
+    </div>
+
+  </div>
+
+  <ul class="ul-menu-responsivo remove">
+    <div class="caixa-com-nomes">
+      <li><a href="./index.html">Início</a></li>
+      <li><a href="#">Simulados</a></li>
+      <li><a href="./equipe.html">Equipe</a></li>
+      <li><a href="./localizacao.html">Localização</a></li>
+    </div>
 
     <div>
-      <button class="tag-button-nav">MATRICULE-SE PELO WHATSAPP</button>
+      <a href="http://wa.me/5521970042950?text=+Olá, estou vindo pelo site e gostaria de saber mais sobre o curso!"><button
+          class="tag-button-nav-responsivo">MATRICULE-SE PELO WHATSAPP</button></a>
     </div>
 
-    <div class="image-icon-traco">
-      <img class="image-icon-traco" src="./asset-img/menu-removebg-preview.png" alt="imagem-menu">
-    </div>
-  </nav>
-
-</div>
+  </ul>
 
   <hr>
+
   <main>
 
     <div class="div-projeto-todo">
@@ -49,10 +80,10 @@
       <article>
         <div class="div-buttons">
           <button class="show-all">
-            butão 1 mostrar tudo forEach
+            Mostrar todos os cursos
           </button>
           <button class="show-Descount">
-            butão 2 Map Mapear
+            Quero 5% de desconto
           </button>
           <button>
             butão 3 Redulce Somar tudo
@@ -63,7 +94,7 @@
         </div>
       </article>
 
-      <main class="div-cardapio-complet">
+      <div class="div-cardapio-complet">
 
         <!-- <div class="cardapio-individual hiden">
                 <img src="./imagensProjeto/bacon-egg.png" alt="imagem-comida">
@@ -72,14 +103,15 @@
                 <a class="buttonComprarLanche" onclick="compraLanche()">COMPRAR</a>
               </div> -->
 
-      </main>
+      </div>
 
     </div>
-
-    <script src="./produtos-cursos.js"></script>
-    <!-- precisa vir primeiro porque ele ler primeiro e depois usa oq leu... -->
-    <script src="./script-cursos.js"></script>
   </main>
+
+  <script src="./produtos-cursos.js"></script>
+  <!-- precisa vir primeiro porque ele ler primeiro e depois usa oq leu... -->
+  <script src="./script-cursos.js"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>

@@ -29,9 +29,5 @@ function imgTraco() {
         ulMenu.classList.add('remove');
         // image.src = "./asset-img-cursos/img-fecha-x.png"
         icon.innerHTML = ' <div class="image-icon-traco"><img class="icon" onclick="imgTraco()" src="./asset-img/menu-removebg-preview.png" alt="imagem-menu"></div>'
-
-
     }
-    
-    
 }
