@@ -1,8 +1,12 @@
-let buttonMostrarTudo = document.querySelector('.show-all'); // button chamar função
 let divCardapio = document.querySelector('.div-cardapio-complet'); // div que mostra as informações
+
+let buttonMostrarTudo = document.querySelector('.show-all'); // button chamar função
 
 let buttonMostraDesconto = document.querySelector('.show-Descount');
 
+let SomaTotal = document.querySelector('.soma-all');
+
+let filtraInfor = document.querySelector('.filtra-all');
 // PRECISO CRIAR A FUNCTION DE NAVEGAR ENTRE AS PAGINAS
 function MostrarTudoForEach(parametroValores) {
   let myDivCardapio = ''; // começa a variavel sem nada ..
@@ -33,6 +37,20 @@ MostrarTudoForEach(trocaPrice)
 //   window.location.href = "index.html";
 // }
 
+function mostrarASoma() {
+  let valorTotal = menuOptions.reduce((acc, crr) => acc + crr.price, 0)
+   
+  divCardapio.innerHTML = `
+  <div class="cardapio-individual">
+  <p> A Soma Dos Cursos é R$ ${valorTotal}</p>
+  </div>
+  `
+}
+
+function filtrarInfor() {
+
+}
+
 
 buttonMostrarTudo.addEventListener('click', () => MostrarTudoForEach(menuOptions));
 //1° função mostrar na tela com forEach
@@ -40,3 +58,9 @@ buttonMostrarTudo.addEventListener('click', () => MostrarTudoForEach(menuOptions
 
 buttonMostraDesconto.addEventListener('click', mostrarDesconto)
 //2° função MAP junto com forEach para mostrar na tela com desconto!!
+
+
+SomaTotal.addEventListener('click', mostrarASoma)
+
+
+filtraInfor.addEventListener('click', filtrarInfor)
