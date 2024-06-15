@@ -441,6 +441,7 @@ body{
   /* parte black */
 
 
+
   main {
     width: 100vw;
     height: 106%;
@@ -456,12 +457,11 @@ body{
   .div-projeto-todo {
     width: 100vw;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding-top: 7vh;
-    padding-bottom: 7vh;
     background-color: #242121ee;
+    padding-bottom: 80%; 
+
+    /* esee aqui mudar o fundo aonde aparece os cursos */
 
   }
 
