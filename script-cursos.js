@@ -1,12 +1,10 @@
 let divCardapio = document.querySelector('.div-cardapio-complet'); // div que mostra as informações
-
 let buttonMostrarTudo = document.querySelector('.show-all'); // button chamar função
-
 let buttonMostraDesconto = document.querySelector('.show-Descount');
-
 let SomaTotal = document.querySelector('.soma-all');
+let filtrarCurso = document.querySelector('.filtra-curso');
+let filtrarNr = document.querySelector('.filtra-NR');
 
-let filtraInfor = document.querySelector('.filtra-all');
 // PRECISO CRIAR A FUNCTION DE NAVEGAR ENTRE AS PAGINAS
 function MostrarTudoForEach(parametroValores) {
   let myDivCardapio = ''; // começa a variavel sem nada ..
@@ -47,20 +45,26 @@ function mostrarASoma() {
   `
 }
 
-function filtrarInfor() {
+function functionFiltrarCurso() {
+  const filtraCourse = menuOptions.filter((item)=> item.course)
 
+  MostrarTudoForEach(filtraCourse)
+}
+
+function FunctionFiltrarNr() {
+  const filtraNr = menuOptions.filter((item)=> item.course != true)
+
+  MostrarTudoForEach(filtraNr)
 }
 
 
 buttonMostrarTudo.addEventListener('click', () => MostrarTudoForEach(menuOptions));
 //1° função mostrar na tela com forEach
 
-
 buttonMostraDesconto.addEventListener('click', mostrarDesconto)
 //2° função MAP junto com forEach para mostrar na tela com desconto!!
 
-
 SomaTotal.addEventListener('click', mostrarASoma)
 
-
-filtraInfor.addEventListener('click', filtrarInfor)
+filtrarCurso.addEventListener('click', functionFiltrarCurso)
+filtrarNr.addEventListener('click', FunctionFiltrarNr)
