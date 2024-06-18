@@ -558,22 +558,27 @@ e coloca a tag img -> slide img{} */
 
   .image-icon-traco {
     /*  imagem de traço utilizado na responsividade */
-    display: flex;
+    /* display: flex;
+    align-items: center;
     justify-content: center;
-    width: 35%;
-    height: 120%;  
-    margin: 0;
-    padding: 0;
+    width: 68%; */
+
+    display: flex;
+    align-items: center;
+    width: 68%;
+    height: 90%;
+    justify-content: space-around;
   }
 
-  .image-icon-traco:active{
+  .image-icon-traco:active {
     background-color: #08080849;
     opacity: .5;
   }
 
   img.icon {
-    margin-top: 10%;
-    height: 52%;
+    
+    width: 20%;
+    height: 60%;
   }
 
   hr {
