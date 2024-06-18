@@ -170,11 +170,210 @@ footer {
   height: 20vh;
 }
 
-@media screen and (max-width:892px) {
+@media screen and (max-width:1024px) {
 
+  body {
+    width: 100vw;
+    height: 100%;
+  }
 
-  .tag-button-nav{
+  .conteiner {
+    /* esse é a barra de navegação  antes*/
+    /* width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center; */
+
+    /* agora */
+
+    width: 100vw;
+    height: 12%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  nav {
+    /* tag nav do html */
+    /* display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #d10b0b; */
+
     display: none;
+  }
+
+  .nav-responsiva {
+    /* aqui esta a div nova */
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .my-image-logo-bombeiro {
+    /* imagem polo na barra de navegação */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26%;
+    height: 80%;
+    margin: 1vh;
+    cursor: pointer;
+  }
+
+  .caixa-ul-nav {
+    /* caixa por fora dos links */
+    /* width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+    display: none;
+  }
+
+  /* fora da div container */
+  .ul-menu-responsivo {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 100%;
+    list-style-type: none;
+    background-color: #1f1e1e;
+    text-align: center;
+    transition: 1s;
+    padding: 5vh 0;
+    margin-bottom: 0vh;
+  }
+
+  li a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin-bottom: 3vh;
+    text-transform: uppercase;
+    color: #d10b0b;
+    font-weight: 600;
+  }
+
+  li a:hover {
+    opacity: 0.5;
+  }
+
+  .remove {
+    display: none;
+    transition: 1s;
+  }
+
+  .tag-button-nav-responsivo {
+    /* butão no menu navegação */
+    border: none;
+    background: linear-gradient(rgb(196, 11, 5), rgb(207, 123, 33));
+    color: white;
+    cursor: pointer;
+    font-size: 80%;
+    width: 40%;
+    height: 7vh;
+    border-radius: 10px;
+    font-weight: 800;
+    margin: 0 auto;
+    text-decoration: none;
+  }
+
+  .caixa-link-li-nomes {
+    /* div dentro da caixa  ul 'links' */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    gap: 6%;
+  }
+
+  nav ul li a {
+    /* links 'nomes'' */
+    font-size: 100%;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #d10b0b;
+    align-content: flex-end;
+    font-size: 90%;
+  }
+
+  nav ul li a:hover {
+    /* hover dos links navegação */
+    color: black;
+    transition: 0.8s;
+    font-size: 108%;
+
+    font-style: bold;
+  }
+
+  nav ul li a:active {
+    /* active dos links navegação */
+    opacity: .5;
+    color: red;
+  }
+
+  .tag-button-nav {
+    /* butão no menu navegação */
+    /* border: none;
+    background: linear-gradient(rgb(196, 11, 5), rgb(207, 123, 33));
+    color: white;
+    cursor: pointer;
+    font-size: 2.6vh;
+    width: 19vw;
+    height: 10vh;
+    border-radius: 40px;
+    font-weight: 800;
+    margin-right: 3vw; */
+    display: none;
+    text-decoration: none;
+  }
+
+  .tag-button-nav:hover {
+    /* hover do butão navegação */
+    background: linear-gradient(rgb(11, 10, 10), rgb(11, 10, 10));
+    transition: 1s;
+  }
+
+  .tag-button-nav:active {
+    /* active do butão navegação */
+    opacity: .8;
+  }
+
+  .image-icon-traco {
+    /*  imagem de traço utilizado na responsividade */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 68%;
+
+  }
+
+  .image-icon-traco:active {
+    background-color: #08080849;
+    opacity: .5;
+  }
+
+  img.icon {
+    display: flex;
+    width: 50%;
+    height: 80%;
+  }
+
+  hr {
+    /* traço para dividir o menu navegação e a pagina main */
+    border: 0.1 solid;
+    margin-top: 0em;
+    box-shadow: 5px 0px 5px;
   }
 
   /* localiização */
