@@ -6,7 +6,7 @@ document.getElementById("radio1").checked = true; // inicia a 1° imagem já com
 
 setInterval(function () {  // faz a função durante o tempo colocado no final
     nextImage();
-}, 3000);
+}, 6000);
 
 function nextImage() { // função proxima imagem
     count++; // acrescendta mais1
