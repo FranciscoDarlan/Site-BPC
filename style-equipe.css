@@ -8,6 +8,23 @@
   background-color: linear-gradient(rgba(250, 249, 249, 0.415), rgba(232, 232, 242, 0.472));
 }
 
+body {
+  /* pagina toda!!! */
+  background-color: linear-gradient(rgba(250, 249, 249, 0.415), rgba(232, 232, 242, 0.472));
+  width: 100vw;
+  height: 100vh;
+}
+
+
+.conteiner {
+  /* esse é a barra de navegação */
+  width: 100vw;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 nav {
   /* tag nav do html */
   display: flex;
@@ -16,9 +33,13 @@ nav {
   margin: 1vh;
 }
 
+.nav-responsiva {
+  display: none;
+}
+
 .my-image-logo-bombeiro {
   /* imagem polo na barra de navegação */
-  position: static;
+  display: flex;
   height: 10vh;
   margin: 1vh;
   cursor: pointer;
@@ -29,6 +50,10 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.ul-menu-responsivo {
+  display: none;
 }
 
 .caixa-link-li-nomes {

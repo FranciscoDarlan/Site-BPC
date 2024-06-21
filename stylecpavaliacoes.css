@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;500&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +14,6 @@ body {
   width: 100vw;
   height: 100vh;
 }
-
 
 .conteiner {
   /* esse é a barra de navegação */
@@ -126,77 +124,189 @@ hr {
   box-shadow: 5px 0px 5px;
 }
 
-
-
-/* ---- Local curso ----- */
-.local-curso {
+.caixa-paragrafo {
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin-top: 5vh;
+  justify-content: center;
+  margin: 3% 0;
+}
+
+main {
+  /* tag main  */
   width: 100vw;
-}
-
-.paragrafo-informacao-localizacao {
-  font-size: 4vh;
-  font-weight: 800;
-}
-
-.div-img-mapas {
+  height: 100vh;
   display: flex;
-  justify-content: space-around;
-  margin-top: 2em;
+  padding-top: 3vh;
+  overflow: hidden;
+
 }
 
-#localizacao-curicica,
-#localizacao-bangu {
-  font-size: 3vh;
-  font-weight: 300;
-  margin-top: 2vh;
+.caixa-paragrafo {
+  font-size: 110%;
 }
 
-.class-iframe-mapa {
-  width: 30vw;
-  height: 30vh;
-}
-
-.mapa-curicica {
+.link-google{
+  font-size: 120%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1em;
+  justify-content: center;
+  margin-right: 4%;
 }
 
-.mapa-bangu {
+.link-google-responsivo{
+  display: none;
+}
+
+/*
+aqui config que so 
+aparece a imagem do tamanho 
+colocado
+*/
+.slider {
+  /* aqui é o quadrado que eu quero que aparaceça */
+  margin: 4vh auto;
+  width: 500px;
+  /* aqui tem que ser em px, porque vai ser um quadrado fixo */
+  height: 500px;
+  overflow: hidden;
+}
+
+
+.div-img-bpc-fogo {
+  /*caixa onde fica tudo das imagens /*
+  /*slides*/
+  width: 400%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1em;
-  margin-left: 1em;
+  margin-top: 3vh;
 }
 
-.paragraph-contato-curicica,
-.paragraph-contato-bangu {
-  font-size: 3vh;
+.div-img-bpc-fogo input {
+  /*slides com input*/
+  display: none;
+  transition: 1s;
 }
 
-footer {
+.slide {
+  width: 25%;
+  position: relative;
+  transition: 1s;
+}
+
+/* aqui dei um nome para img, mas nao precisava
+era somente dar um espaço utilizar a classe da div
+e coloca a tag img -> slide img{} */
+
+#id-img-1-slide {
+  /*tamanho da imagem 1 */
+  width: 93%;
+  height: 75%;
+  border-radius: 30px;
+  margin-left: 1vh;
+}
+
+#id-img-2-slide {
+  /*tamanho da imagem 2 */
+  width: 86%;
+  height: 85%;
+  margin-left: 3vh;
+  border-radius: 20px;
+}
+
+#id-img-3-slide {
+  /*tamanho da imagem 3 */
+  width: 86%;
+  height: 85%;
+  margin-left: 3vh;
+  border-radius: 20px;
+}
+
+#id-img-4-slide {
+  /*tamanho da imagem 4 */
+  width: 86%;
+  height: 85%;
+  margin-left: 3vh;
+  border-radius: 20px;
+}
+
+/* aqui config botao*/
+.manual-navigation {
+  /* bolinhas de selecionar em cima das imagens*/
+  position: absolute;
+  margin: -5.5vh 0 0 17vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
   gap: 2vh;
-  font-size: 2.5vh;
-  font-weight: 200;
-  padding-bottom: 4vh;
-  text-align: center;
-  margin-top: 10vh;
 }
 
-.img-logo-bpc-footer {
-  height: 20vh;
+.manual-btn {
+  border: 2px solid #0b0b0b;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+  opacity: 0;
+  background-color: rgb(248, 241, 241);
 }
 
-@media screen and (max-width:1024px) {
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background-color: rgb(255, 0, 0);
+}
+
+#radio1:checked~.first {
+  margin-left: 0;
+}
+
+#radio2:checked~.first {
+  margin-left: -25%;
+}
+
+#radio3:checked~.first {
+  margin-left: -50%;
+}
+
+#radio4:checked~.first {
+  margin-left: -75%;
+}
+
+.navigation-auto div {
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.navigation-auto {
+  position: absolute;
+  margin: -5.5vh 0 0 17vh;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 53.5px;
+}
+
+#radio1:checked~.navigation-auto .auto-btn1 {
+  background-color: #0b0b0b;
+}
+
+#radio2:checked~.navigation-auto .auto-btn2 {
+  background-color: #0b0b0b;
+}
+
+#radio3:checked~.navigation-auto .auto-btn3 {
+  background-color: #0b0b0b;
+}
+
+#radio4:checked~.navigation-auto .auto-btn4 {
+  background-color: #0b0b0b;
+}
+
+@media screen and (max-width:1029px) {
+
 
   body {
     width: 100vw;
@@ -398,61 +508,190 @@ footer {
   hr {
     /* traço para dividir o menu navegação e a pagina main */
     border: 0.1 solid;
-    margin-top: 0em;
+    margin-top: 1em;
     box-shadow: 5px 0px 5px;
+    display: none;
   }
 
-  /* localiização */
-  .local-curso {
-    display: block;
-    margin: 0;
-    padding: 0;
-    height: 85vh;
+  main {
+    /* tag main  */
+    height: auto;
+    flex-wrap: wrap-reverse;
   }
 
-  .paragrafo-informacao-localizacao {
-    font-size: 4vh;
-    font-weight: 800;
-    margin-top: 8vh;
+  .caixa-paragrafo {
+    font-size: 70%;
   }
 
-  .div-img-mapas {
+  .link-google{
+    display: none;
+  }
+
+  .link-google-responsivo{
     display: flex;
-    flex-direction: column;
-    margin-top: 2em;
-  }
-
-  .class-iframe-mapa {
-    width: 30vw;
-    height: 15vh;
-  }
-
-  #localizacao-bangu {
-    font-weight: 300;
-    margin-top: 13vh;
-  }
-
-  .paragraph-contato-curicica,
-  .paragraph-contato-bangu {
-    font-size: 2vh;
-    padding: 0 1px;
-  }
-
-  footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    gap: 4vh;
-    font-size: 2vh;
-    font-weight: 200;
-    text-align: center;
-    padding: 0 4vh;
-    padding-bottom: 4vh;
+    margin-right: 5%;
   }
 
-  .img-logo-bpc-footer {
-    height: 12vh;
-    margin-top: 12vh;
+  /* aqui começa a imagem */
+
+
+
+  /*
+  aqui config que so 
+  aparece a imagem do tamanho 
+  colocado
+  */
+  .slider {
+    /* aqui é o quadrado que eu quero que aparaceça */
+    margin: 2vh auto;
+    width: 359px;
+    /* aqui tem que ser em px, porque vai ser um quadrado fixo */
+    height: 364px;
+    overflow: hidden;
+    margin-top: 10vh;
+  }
+
+
+  .div-img-bpc-fogo {
+    /*caixa onde fica tudo das imagens /*
+    /*slides*/
+    width: 400%;
+    display: flex;
+    margin-top: 3vh;
+    margin-bottom: 100vh;
+  }
+
+  .div-img-bpc-fogo input {
+    /*slides com input*/
+    display: none;
+    transition: 1s;
+  }
+
+  .slide {
+    width: 25%;
+    position: relative;
+    transition: 1s;
+  }
+
+  /* aqui dei um nome para img, mas nao precisava
+  era somente dar um espaço utilizar a classe da div
+  e coloca a tag img -> slide img{} */
+
+  #id-img-1-slide {
+    /*tamanho da imagem 1 */
+    width: 93%;
+    height: 75%;
+    border-radius: 30px;
+    margin-left: 1vh;
+  }
+
+  #id-img-2-slide {
+    /*tamanho da imagem 2 */
+    width: 86%;
+    height: 85%;
+    margin-left: 3vh;
+    border-radius: 20px;
+  }
+
+  #id-img-3-slide {
+    /*tamanho da imagem 3 */
+    width: 86%;
+    height: 85%;
+    margin-left: 3vh;
+    border-radius: 20px;
+  }
+
+  #id-img-4-slide {
+    /*tamanho da imagem 4 */
+    width: 86%;
+    height: 85%;
+    margin-left: 3vh;
+    border-radius: 20px;
+  }
+
+  /* aqui config botao*/
+  .manual-navigation {
+    /* bolinhas de selecionar manual invisivel em cima das imagens*/
+    position: absolute;
+    gap: none;
+    margin: -6.5vh 0px 0px 9vh;
+    /* background-color: pink; caso queira ver */
+  }
+
+  .manual-btn {
+    border: 2px solid #0b0b0b;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    opacity: 0;
+    background-color: rgb(231, 5, 5);
+  }
+
+  .manual-btn:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  .manual-btn:hover {
+    background-color: rgb(255, 0, 0);
+  }
+
+  #radio1:checked~.first {
+    margin-left: 0;
+  }
+
+  #radio2:checked~.first {
+    margin-left: -25%;
+  }
+
+  #radio3:checked~.first {
+    margin-left: -50%;
+  }
+
+  #radio4:checked~.first {
+    margin-left: -75%;
+  }
+
+  /* bolinha que passa sozinho */
+  .navigation-auto div {
+    width: 1%;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+
+  /* esse bolinha que passa sozinho posicionamento*/
+  .navigation-auto {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: -6.5vh 0px 0px 9vh;
+
+  }
+
+  /* distancia das bolinhas pretas passando sozinho */
+  .navigation-auto div:not(:last-child) {
+    justify-content: space-between;
+  }
+
+  #radio1:checked~.navigation-auto .auto-btn1 {
+    background-color: #0b0b0b;
+  }
+
+  #radio2:checked~.navigation-auto .auto-btn2 {
+    background-color: #0b0b0b;
+  }
+
+  #radio3:checked~.navigation-auto .auto-btn3 {
+    background-color: #0b0b0b;
+  }
+
+  #radio4:checked~.navigation-auto .auto-btn4 {
+    background-color: #0b0b0b;
   }
 }
