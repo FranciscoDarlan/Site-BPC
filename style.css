@@ -1,834 +1,303 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;500&family=Roboto:wght@100;300;400;500;700;900&display=swap');
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto";
-  background-color: linear-gradient(rgba(250, 249, 249, 0.415), rgba(232, 232, 242, 0.472));
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  /* pagina toda!!! */
-  background-color: linear-gradient(rgba(250, 249, 249, 0.415), rgba(232, 232, 242, 0.472));
-  width: 100vw;
-  height: 100vh;
-}
-
-.conteiner {
-  /* esse é a barra de navegação */
-  width: 100vw;
-  height: 15%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-nav {
-  /* tag nav do html */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 1vh;
-}
-
-.nav-responsiva {
-  display: none;
-}
-
-.my-image-logo-bombeiro {
-  /* imagem polo na barra de navegação */
-  display: flex;
-  height: 10vh;
-  margin: 1vh;
-  cursor: pointer;
-}
-
-.caixa-ul-nav {
-  /* caixa por fora dos links */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.ul-menu-responsivo {
-  display: none;
-}
-
-.caixa-link-li-nomes {
-  /* div dentro da caixa  ul 'links' */
-  display: flex;
-  align-items: center;
-  gap: 8vh;
-  margin-right: 5vh;
-  list-style-type: none;
-
-  color: #d10b0b;
-  font-weight: bold;
-  font-size: 3vh;
-}
-
-nav ul li a {
-  /* links 'nomes'' */
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #d10b0b;
-}
-
-nav ul li a:hover {
-  /* hover dos links navegação */
-  color: black;
-  transition: 0.5s;
-}
-
-nav ul li a:active {
-  /* active dos links navegação */
-  opacity: .5;
-  color: red;
-}
-
-.tag-button-nav {
-  /* butão no menu navegação */
-  border: none;
-  background: linear-gradient(rgb(196, 11, 5), rgb(207, 123, 33));
-  color: white;
-  cursor: pointer;
-  font-size: 2.6vh;
-  width: 19vw;
-  height: 10vh;
-  border-radius: 40px;
-  font-weight: 800;
-  margin-right: 3vw;
-}
-
-.tag-button-nav:hover {
-  /* hover do butão navegação */
-  background: linear-gradient(rgb(11, 10, 10), rgb(11, 10, 10));
-  transition: 1s;
-}
-
-.tag-button-nav:active {
-  /* active do butão navegação */
-  opacity: .8;
-}
-
-.image-icon-traco {
-  /*  imagem de traço utilizado na responsividade */
-  display: none;
-}
-
-hr {
-  /* traço para dividir o menu navegação e a pagina main */
-  border: 0.1 solid;
-  margin-top: 1em;
-  box-shadow: 5px 0px 5px;
-}
-
-main {
-  /* tag main  */
-  width: 100vw;
-  height: 85vh;
-  display: flex;
-  padding-top: 3vh;
-  overflow: hidden;
-
-}
-
-.text-bpc {
-  /* caixa de tudo com palavras de infomações  */
-  width: 65%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-items: center;
-  gap: 2vh;
-}
-
-.text-h1 {
-  /* texto h1 dentro da main  */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  font-size: 5.5vh;
-  font-weight: bold;
-}
-
-.text-bpc-red {
-  /* span texto red dentro do h1  */
-  color: #ed0909;
-  font-weight: bold;
-}
-
-.text-h2 {
-  /* texto h2 dentro da main  */
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-weight: 300;
-  font-size: 2.8vh;
-  letter-spacing: 1px;
-}
-
-.text-h3 {
-  /* texto h3 dentro dentro da main  */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  font-size: 3vh;
-}
-
-.paragrafy-main {
-  /* paragrafo dentro da main  */
-  width: 98%;
-  display: flex;
-  text-align: center;
-  font-size: 2.5vh;
-  font-weight: 300;
-  padding: 0 15%;
-}
-
-.button-main {
-  /* div butão dentro da main  */
-  margin-bottom: 5vh;
-}
-
-.btn-main {
-  /* butão dentro da main  */
-  width: 30vw;
-  height: 8vh;
-  font-size: 3vh;
-  font-weight: 700;
-  border: none;
-  background-color: black;
-  color: white;
-  border-radius: 5vh;
-  letter-spacing: .3px;
-  cursor: pointer;
-}
-
-.btn-main:hover {
-  /* butão hover main  */
-  background-color: rgba(0, 0, 0, 0.631);
-  transition: 0.2s;
-}
-
-.btn-main:active {
-  /* butao active main  */
-  opacity: 0.5;
-}
-
-.div-medias-sociais {
-  display: flex;
-  flex-direction: row;
-  gap: 8vh;
-}
-
-.logo-rede-sociais {
-  height: 6vh;
-}
-
-#id-logo-whatssap {
-  height: 10vh;
-  margin-top: -2vh;
-}
-
-#id-logo-face {
-  height: 8.3vh;
-  margin-top: -1.3vh;
-}
-
-/*
-aqui config que so 
-aparece a imagem do tamanho 
-colocado
-*/
-.slider {
-  /* aqui é o quadrado que eu quero que aparaceça */
-  margin: 4vh auto;
-  width: 500px;
-  /* aqui tem que ser em px, porque vai ser um quadrado fixo */
-  height: 500px;
-  overflow: hidden;
-}
-
-
-.div-img-bpc-fogo {
-  /*caixa onde fica tudo das imagens /*
-  /*slides*/
-  width: 400%;
-  display: flex;
-  margin-top: 3vh;
-}
-
-.div-img-bpc-fogo input {
-  /*slides com input*/
-  display: none;
-  transition: 1s;
-}
-
-.slide {
-  width: 25%;
-  position: relative;
-  transition: 1s;
-}
-
-/* aqui dei um nome para img, mas nao precisava
-era somente dar um espaço utilizar a classe da div
-e coloca a tag img -> slide img{} */
-
-#id-img-1-slide {
-  /*tamanho da imagem 1 */
-  width: 93%;
-  height: 75%;
-  border-radius: 30px;
-  margin-left: 1vh;
-}
-
-#id-img-2-slide {
-  /*tamanho da imagem 2 */
-  width: 86%;
-  height: 85%;
-  margin-left: 3vh;
-  border-radius: 20px;
-}
-
-#id-img-3-slide {
-  /*tamanho da imagem 3 */
-  width: 86%;
-  height: 85%;
-  margin-left: 3vh;
-  border-radius: 20px;
-}
-
-#id-img-4-slide {
-  /*tamanho da imagem 4 */
-  width: 86%;
-  height: 85%;
-  margin-left: 3vh;
-  border-radius: 20px;
-}
-
-/* aqui config botao*/
-.manual-navigation {
-  /* bolinhas de selecionar em cima das imagens*/
-  position: absolute;
-  margin: -5.5vh 0 0 17vh;
-  display: flex;
-  justify-content: center;
-  gap: 2vh;
-}
-
-.manual-btn {
-  border: 2px solid #0b0b0b;
-  padding: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 1s;
-  opacity: 0;
-  background-color: rgb(248, 241, 241);
-}
-
-.manual-btn:not(:last-child) {
-  margin-right: 40px;
-}
-
-.manual-btn:hover {
-  background-color: rgb(255, 0, 0);
-}
-
-#radio1:checked~.first {
-  margin-left: 0;
-}
-
-#radio2:checked~.first {
-  margin-left: -25%;
-}
-
-#radio3:checked~.first {
-  margin-left: -50%;
-}
-
-#radio4:checked~.first {
-  margin-left: -75%;
-}
-
-.navigation-auto div {
-  border: 2px solid black;
-  padding: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 1s;
-}
-
-.navigation-auto {
-  position: absolute;
-  margin: -5.5vh 0 0 17vh;
-  display: flex;
-  justify-content: center;
-}
-
-.navigation-auto div:not(:last-child) {
-  margin-right: 53.5px;
-}
-
-#radio1:checked~.navigation-auto .auto-btn1 {
-  background-color: #0b0b0b;
-}
-
-#radio2:checked~.navigation-auto .auto-btn2 {
-  background-color: #0b0b0b;
-}
-
-#radio3:checked~.navigation-auto .auto-btn3 {
-  background-color: #0b0b0b;
-}
-
-#radio4:checked~.navigation-auto .auto-btn4 {
-  background-color: #0b0b0b;
-}
-
-@media screen and (max-width:1029px) {
-
- 
-  body {
-    width: 100vw;
-    height: 100%;
-  }
-
-  .conteiner {
-    /* esse é a barra de navegação  antes*/
-    /* width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center; */
-
-    /* agora */
-
-    width: 100vw;
-    height: 12%;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-  }
-
-  nav {
-    /* tag nav do html */
-    /* display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: #d10b0b; */
-
-    display: none;
-  }
-
-  .nav-responsiva {
-    /* aqui esta a div nova */
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  .my-image-logo-bombeiro {
-    /* imagem polo na barra de navegação */
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 26%;
-    height: 80%;
-    margin: 1vh;
-    cursor: pointer;
-  }
-
-  .caixa-ul-nav {
-    /* caixa por fora dos links */
-    /* width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center; */
-    display: none;
-  }
-
-  /* fora da div container */
-  .ul-menu-responsivo {
-    width: 100vw;
+    background-color: #e5e5e5;
+    min-height: 130vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    font-size: 100%;
-    list-style-type: none;
-    background-color: #1f1e1e;
-    text-align: center;
-    transition: 1s;
-    padding: 5vh 0;
-    margin-bottom: 0vh;
-  }
+}
 
-  li a {
+.localização-redes {
+    background-color: #1e1e1e;
+    padding: 10px 20px;
     display: flex;
-    justify-content: center;
-    text-decoration: none;
-    margin-bottom: 3vh;
-    text-transform: uppercase;
-    color: #d10b0b;
-    font-weight: 600;
-  }
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
-  li a:hover {
-    opacity: 0.5;
-  }
+.localização,
+.links {
+    padding-left: 20%;
+    padding-right: 20%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
 
-  .remove {
-    display: none;
-    transition: 1s;
-  }
-
-  .tag-button-nav-responsivo {
-    /* butão no menu navegação */
-    border: none;
-    background: linear-gradient(rgb(196, 11, 5), rgb(207, 123, 33));
+.localização a,
+.links a {
+    display: flex;
+    align-items: center;
     color: white;
-    cursor: pointer;
-    font-size: 80%;
-    width: 40%;
-    height: 7vh;
-    border-radius: 10px;
-    font-weight: 800;
-    margin: 0 auto;
     text-decoration: none;
-  }
+}
 
-  .caixa-link-li-nomes {
-    /* div dentro da caixa  ul 'links' */
+#texto-localização {
+    
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.logo span {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 60px;
+    color: #bc2c2d;
+}
+
+.nome {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.Fale {
+    display: flex;
+    align-items: flex-end;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+}
+
+.fundo-menu {
+    margin: 10px auto;
+    background: linear-gradient(rgb(176, 104, 28), rgb(165, 34, 34));
+    border-radius: 20px;
+    padding: 10px;
+    width: 60%;
+    max-width: 800px;
+    min-width: 280px;
+    text-align: center;
+}
+
+.botao {
     display: flex;
     flex-wrap: wrap;
-    justify-content: end;
-    gap: 6%;
-  }
-
-  nav ul li a {
-    /* links 'nomes'' */
-    font-size: 100%;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #d10b0b;
-    align-content: flex-end;
-    font-size: 90%;
-  }
-
-  nav ul li a:hover {
-    /* hover dos links navegação */
-    color: black;
-    transition: 0.8s;
-    font-size: 108%;
-
-    font-style: bold;
-  }
-
-  nav ul li a:active {
-    /* active dos links navegação */
-    opacity: .5;
-    color: red;
-  }
-
-  .tag-button-nav {
-    /* butão no menu navegação */
-    /* border: none;
-    background: linear-gradient(rgb(196, 11, 5), rgb(207, 123, 33));
-    color: white;
-    cursor: pointer;
-    font-size: 2.6vh;
-    width: 19vw;
-    height: 10vh;
-    border-radius: 40px;
-    font-weight: 800;
-    margin-right: 3vw; */
-    display: none;
-    text-decoration: none;
-  }
-
-  .tag-button-nav:hover {
-    /* hover do butão navegação */
-    background: linear-gradient(rgb(11, 10, 10), rgb(11, 10, 10));
-    transition: 1s;
-  }
-
-  .tag-button-nav:active {
-    /* active do butão navegação */
-    opacity: .8;
-  }
-
-  .image-icon-traco {
-    /*  imagem de traço utilizado na responsividade */
-    display: flex;
-    align-items: center;
     justify-content: center;
-    width: 68%;
+    gap: 10px;
+}
 
-  }
-
-  .image-icon-traco:active {
-    background-color: #08080849;
-    opacity: .5;
-  }
-
-  img.icon {
-    display: flex;
-    width: 50%;
-    height: 80%;
-  }
-
-  hr {
-    /* traço para dividir o menu navegação e a pagina main */
-    border: 0.1 solid;
-    margin-top: 1em;
-    box-shadow: 5px 0px 5px;
-    display: none;
-  }
-
-  main {
-    /* tag main  */
-    height: auto;
-    flex-wrap: wrap-reverse;
-  }
-
-
-
-  /* trocado pela configuração antiga */
-
-  .text-bpc {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .text-h1 {
-    display: flex;
-    justify-content: center;
-    font-size: 4vh;
-  }
-
-  .text-h2 {
-    display: flex;
-    justify-content: center;
-  }
-
-  .text-h3 {
-    display: flex;
-    align-items: center;
-  }
-
-  .paragrafy-main {
-    width: 92vw;
-    font-size: 2vh;
-    margin-top: 0.5vh;
-    padding: 0vh;
-  }
-
-  .btn-main {
-    width: 60vw;
-    height: 8vh;
-    font-size: 2.5vh;
-    font-weight: 700;
+.menus {
     border: none;
-    background: linear-gradient(rgb(196, 11, 5), rgb(207, 123, 33));
+    background-color: transparent;
     color: white;
-    border-radius: 5vh;
-    letter-spacing: .3px;
+    padding: 15px 25px;
+    transition: background-color 0.3s, color 0.3s;
     cursor: pointer;
-  }
+}
 
-  .btn-main:hover {
-    background-color: rgba(0, 0, 0, 0.631);
-    transition: 0.5s;
-  }
+.menus:hover {
+    background-color: white;
+    color: #bc2c2d;
+    border-radius: 20px;
+}
 
-  .btn-main:active {
-    opacity: 0.5;
-  }
-
-  .div-medias-sociais {
-    display: flex;
-    flex-direction: row;
-    gap: 1vh;
-    margin: 0 0 2vh 0;
-    /* margin-top: 3vh; */
-  }
-
-
-
-
-  /* aqui começa a imagem */
-
-
-
-  /*
-  aqui config que so 
-  aparece a imagem do tamanho 
-  colocado
-  */
-  .slider {
-    /* aqui é o quadrado que eu quero que aparaceça */
-    margin: 2vh auto;
-    width: 359px;
-    /* aqui tem que ser em px, porque vai ser um quadrado fixo */
-    height: 364px;
-    overflow: hidden;
-  }
-
-
-  .div-img-bpc-fogo {
-    /*caixa onde fica tudo das imagens /*
-    /*slides*/
-    width: 400%;
-    display: flex;
-    margin-top: 3vh;
-    margin-bottom: 100vh;
-  }
-
-  .div-img-bpc-fogo input {
-    /*slides com input*/
-    display: none;
-    transition: 1s;
-  }
-
-  .slide {
-    width: 25%;
+.fundo-banner {
+    background-color: #1e1e1e;
+    width: 100%;
+    height: 60vh;
     position: relative;
-    transition: 1s;
-  }
+    overflow: hidden;
+}
 
-  /* aqui dei um nome para img, mas nao precisava
-  era somente dar um espaço utilizar a classe da div
-  e coloca a tag img -> slide img{} */
+.slider-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
 
-  #id-img-1-slide {
-    /*tamanho da imagem 1 */
-    width: 93%;
-    height: 75%;
-    border-radius: 30px;
-    margin-left: 1vh;
-  }
-
-  #id-img-2-slide {
-    /*tamanho da imagem 2 */
-    width: 86%;
-    height: 85%;
-    margin-left: 3vh;
-    border-radius: 20px;
-  }
-
-  #id-img-3-slide {
-    /*tamanho da imagem 3 */
-    width: 86%;
-    height: 85%;
-    margin-left: 3vh;
-    border-radius: 20px;
-  }
-
-  #id-img-4-slide {
-    /*tamanho da imagem 4 */
-    width: 86%;
-    height: 85%;
-    margin-left: 3vh;
-    border-radius: 20px;
-  }
-
-  /* aqui config botao*/
-  .manual-navigation {
-    /* bolinhas de selecionar manual invisivel em cima das imagens*/
-    position: absolute;
-    gap: none;
-    margin: -6.5vh 0px 0px 9vh;
-    /* background-color: pink; caso queira ver */
-  }
-
-  .manual-btn {
-    border: 2px solid #0b0b0b;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-    opacity: 0;
-    background-color: rgb(231, 5, 5);
-  }
-
-  .manual-btn:not(:last-child) {
-    margin-right: 40px;
-  }
-
-  .manual-btn:hover {
-    background-color: rgb(255, 0, 0);
-  }
-
-  #radio1:checked~.first {
-    margin-left: 0;
-  }
-
-  #radio2:checked~.first {
-    margin-left: -25%;
-  }
-
-  #radio3:checked~.first {
-    margin-left: -50%;
-  }
-
-  #radio4:checked~.first {
-    margin-left: -75%;
-  }
-
-  /* bolinha que passa sozinho */
-  .navigation-auto div {
-    width: 1%;
-    border: 2px solid black;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-  }
-
-  /* esse bolinha que passa sozinho posicionamento*/
-  .navigation-auto {
-    position: absolute;
+.slider-track {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 400vw;
+    height: 100%;
+    transition: transform 0.8s ease-in-out;
+}
 
-    margin: -6.5vh 0px 0px 9vh;
+.slider-track img {
+    width: 100vw;
+    height: 100%;
+    object-fit: contain;
+    max-width: 100%;
+    object-position: center;
+    flex-shrink: 0;
+    margin: 0 auto;
+}
 
-  }
+.footer {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: auto;
+    position: relative;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
 
-  /* distancia das bolinhas pretas passando sozinho */
-  .navigation-auto div:not(:last-child) {
-    justify-content: space-between;
-  }
+@media (max-width: 1100px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-  #radio1:checked~.navigation-auto .auto-btn1 {
-    background-color: #0b0b0b;
-  }
+    body {
+        background-color: #e5e5e5;
+        min-height: 95vh;
+        display: flex;
+        flex-direction: column;
+    }
 
-  #radio2:checked~.navigation-auto .auto-btn2 {
-    background-color: #0b0b0b;
-  }
+    .localização-redes {
+        background-color: #1e1e1e;
+        padding: 10px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 
-  #radio3:checked~.navigation-auto .auto-btn3 {
-    background-color: #0b0b0b;
-  }
+    .localização,
+    .links {
+        padding-left: 0%;
+        padding-right: 0%;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
 
-  #radio4:checked~.navigation-auto .auto-btn4 {
-    background-color: #0b0b0b;
-  }
+    .localização a,
+    .links a {
+        display: flex;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+    }
+
+    header {
+        padding: 20px;
+        font-size: 100%;
+        
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        margin-top: 1px;
+    }
+
+    .logo img {
+        
+    }
+
+    .logo span {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 30px;
+        color: #bc2c2d;
+    }
+
+    .nome {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        margin-left: 10px;
+    }
+
+    .Fale {
+        display: flex;
+        font-size: 90%;
+        align-items: flex-end;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 10px;
+    }
+
+    .fundo-menu {
+        margin: 10px auto;
+        background: linear-gradient(rgb(176, 104, 28), rgb(165, 34, 34));
+        border-radius: 20px;
+        padding: 10px;
+        width: 90%;
+        max-width: 800px;
+        min-width: 80%;
+        text-align: center;
+    }
+
+    .botao {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .menus {
+        border: none;
+        background-color: transparent;
+        color: white;
+        padding: 10px 4px;
+        transition: background-color 0.3s, color 0.3s;
+        cursor: pointer;
+    }
+
+    .menus:hover {
+        background-color: white;
+        color: #bc2c2d;
+        border-radius: 20px;
+    }
+
+    .fundo-banner {
+        background-color: #1e1e1e;
+        width: 100%;
+        height: 50vh;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .slider-container {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .slider-track {
+        display: flex;
+        width: 400vw;
+        height: 100%;
+        transition: transform 0.8s ease-in-out;
+    }
+
+    .slider-track img {
+        width: 100vw;
+        height: 100%;
+        object-fit: contain;
+        max-width: 100%;
+        object-position: center;
+        flex-shrink: 0;
+        margin: 0 auto;
+    }
+
+    .footer {
+        margin: 10%;
+        font-size: 12px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: auto;
+        position: relative;
+        color: black;
+        padding: 20px;
+        text-align: center;
+    }
 }
