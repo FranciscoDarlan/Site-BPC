@@ -1,0 +1,29 @@
+[
+    {
+        "titulo-site": "bpc",
+        "foto-localizacao": "https://img.icons8.com/color/90/place-marker--v1.png",
+        "img-link-externo": "https://img.icons8.com/ios-glyphs/30/external-link.png",
+        "localidade": [
+            {
+                "nome": "Curicica",
+                "local": "https://www.google.com/maps/place/Polo+Curicica/@-22.942932,-43.383122,15z/data=!4m6!3m5!1s0x9bd9299d78a69b:0xae2335df3c16f090!8m2!3d-22.9429316!4d-43.383122!16s%2Fg%2F11pzg4r7f_?entry=ttu"
+            },
+            {
+                "nome": "Bangu",
+                "local": "https://www.google.com/maps/place/Polo+Curicica+Bangu/@-22.8802895,-43.4648697,20z/data=!4m6!3m5!1s0x9bdf37aec154d9:0x236d29d3265a48d7!8m2!3d-22.880334!4d-43.4645246!16s%2Fg%2F11w1jvp075?entry=ttu"
+            }
+        ],
+        "rede": [
+            {
+                "nome": "Instagram",
+                "url": "https://www.instagram.com/polocuricica/",
+                "icon": "https://img.icons8.com/3d-fluency/90/instagram-logo.png"
+            },
+            {
+                "nome": "Facebook",
+                "url": "https://www.facebook.com/share/172z7UVXYd/?mibextid=wwXIfr",
+                "icon": "https://img.icons8.com/fluency/90/facebook.png"
+            }
+        ]
+    }
+]
