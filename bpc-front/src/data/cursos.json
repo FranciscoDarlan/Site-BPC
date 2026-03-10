@@ -1,0 +1,23 @@
+[
+    {
+        "titulo": "Cursos Disponiveis",
+        "descricao": "Curso Profissionalizante em Bombeiro Civil",
+        "cursos": [
+            {
+                "nome": "PRODUTO-1",
+                "slug": "1",
+                "sobre": "Esse e o produto 1",
+                "imagem": [
+                    "/public/cursos/curso/cursoTeste.png"
+                ],
+                "maisVendido": true,
+                "preco": 99.99,
+                "promocao": {
+                    "ativa": true,
+                    "valor": 90.90
+                },
+                "whatsapp": ""
+            }
+        ]
+    }
+]
