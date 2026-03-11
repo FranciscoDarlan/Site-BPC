@@ -8,7 +8,7 @@
                 "slug": "1",
                 "sobre": "Esse e o produto 1",
                 "imagem": [
-                    "/public/cursos/curso/cursoTeste.png"
+                    "/cursos/curso/cursoTeste.png"
                 ],
                 "maisVendido": true,
                 "preco": 99.99,
