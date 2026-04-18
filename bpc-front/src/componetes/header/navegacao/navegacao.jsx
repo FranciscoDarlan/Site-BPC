@@ -1,28 +1,26 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-import { logo } from "../../../config/imagem";
-
 import dadosSocias from "../../../data/social.json";
 
 export default function Nav() {
     const [mostrarTodos, setMostrarTodos] = useState(false)
 
     const linksNav = [
+        { name: "Início", to: "/", type: "internal" },
         { name: "Cursos", to: "/cursos", type: "internal" },
-        { name: "Sobre", to: "/sobre", type: "internal" },
         { name: "Questões", to: "https://questoes-bpc.vercel.app/index.html", type: "external" },
     ]
 
     return (
         <nav className="sticky top-0 z-40 w-full bg-[#86221d] shadow-md">
             <div className="max-w-7xl mx-auto h-14 flex items-center justify-between px-4 md:px-[10%]">
-                <Link to="/" className="shrink-0">
-                    <img title="Ir para página inicial" className="h-12 w-auto md:h-22 transition-transform hover:scale-105" src={logo} alt="logo-bpc" />
+                <Link to={linksNav[0].to} className="text-white uppercase font-bold hover:text-white/60 transition-colors">
+                    {linksNav[0].name}
                 </Link>
 
                 <div className="hidden md:flex flex-row items-center gap-6">
-                    {linksNav.map((link, index) => (
+                    {linksNav.slice(1).map((link, index) => (
                         link.type === "internal" ? (
                             <Link key={index} to={link.to} className="text-white uppercase font-bold text-sm hover:text-white/60 transition-colors">
                                 {link.name}
@@ -50,7 +48,7 @@ export default function Nav() {
                             </div>
 
                             <div className="flex flex-col gap-4">
-                                {linksNav.map((link, index) => (link.type === "internal" ? (
+                                {linksNav.slice(1).map((link, index) => (link.type === "internal" ? (
                                     <Link key={index} to={link.to} onClick={() => setMostrarTodos(false)} className="text-black uppercase font-bold text-sm border-b border-gray-100 pb-2">
                                         {link.name}
                                     </Link>

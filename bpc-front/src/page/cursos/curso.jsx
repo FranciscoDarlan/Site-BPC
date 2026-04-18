@@ -8,14 +8,14 @@ import Footer from "../../componetes/footer/footer";
 import dadosCursos from "../../data/cursos.json";
 
 export default function Curso() {
-    const secao = dadosCursos[0]
-    const maisVendidos = secao.cursos.filter(c => c.maisVendido)
+    const secao = dadosCursos
+    const maisVendidos = secao?.filter(c => c.maisVendido)
     const [busca, setBusca] = useState("")
-    const cursosFiltrados = secao.cursos.filter(curso => curso.nome.toLowerCase().includes(busca.toLowerCase()) || curso.resumo?.toLowerCase().includes(busca.toLowerCase()))
+    const cursosFiltrados = secao?.filter(curso => curso.nome?.toLowerCase().includes(busca.toLowerCase()) || curso.sobre?.toLowerCase().includes(busca.toLowerCase()))
 
     useEffect(() => {
         document.title = "BPC - Cursos"
-    })
+    }, [])
 
     return (
         <>
@@ -24,14 +24,12 @@ export default function Curso() {
             <main className="mt-10 flex flex-col items-center">
                 <div className="w-full max-w-7xl px-0 md:px-5">
                     <div className="flex flex-col items-center">
-                        <h2 className="text-xl md:text-2xl uppercase font-bold">{secao.titulo}</h2>
+                        <h2 className="text-xl md:text-2xl uppercase font-bold">Cursos Disponiveis</h2>
 
-                        {secao.descricao && (
-                            <p className="text-sm md:text-base text-[#bc2c2d]">{secao.descricao}</p>
-                        )}
+                        <p className="text-sm md:text-base text-[#bc2c2d]">Curso Profissionalizante em Bombeiro Civil</p>
 
                         <div className="mt-4 w-[80%] max-w-md">
-                            <input id="buscar-curso" name="busca" type="search" placeholder="Buscar curso..." value={busca} onChange={(e) => setBusca(e.target.value)} className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2" />
+                            <input id="buscar-curso" name="busca" type="search" placeholder="Buscar curso..." value={busca} onChange={(e) => setBusca(e.target.value)} className="w-full px-4 py-2 border border-[#999] rounded-md focus:outline-none focus:ring-2" />
                         </div>
                     </div>
 
@@ -43,28 +41,11 @@ export default function Curso() {
                             const desconto = temPromocao ? Math.round(100 - (precoFinal * 100) / curso.preco) : 0;
                             const parcela = (precoFinal / 12).toFixed(2);
 
-                            const storageKey = `estrelas-${curso.slug}`
-                            let estrelaSalva = localStorage.getItem(storageKey)
-
-                            if (!estrelaSalva) {
-                                const Nota = Math.floor(Math.random() * (5 - 4 + 1)) + 4
-                                localStorage.setItem(storageKey, Nota.toString())
-
-                                estrelaSalva = Nota
-                            }
-
-                            const estrelas = estrelaSalva ? parseInt(estrelaSalva) : (() => {
-                                const Valor = Math.floor(Math.random() * (5 - 4 + 1)) + 4
-
-                                localStorage.setItem(storageKey, Valor.toString())
-                                return Valor
-                            })()
-
                             return (
                                 <Link className="mx-1.5 my-1" key={index} onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }) }} to={`/cursos/${slugify(curso.slug)}`}>
-                                    <div className="shadow-2xl rounded-md w-full overflow-hidden">
+                                    <div className="border border-[#999] rounded-md w-full overflow-hidden">
                                         {curso.imagem?.length > 0 && (
-                                            <img className="w-full h-45 object-contain bg-[#e7e7e7]" src={curso.imagem[0]} alt={curso.nome} />
+                                            <img className="w-full h-45 object-contain border-b border-[#999]" src={curso.imagem} alt={curso.nome} />
                                         )}
 
                                         <div className="py-4 px-3 bg-white">
@@ -75,10 +56,9 @@ export default function Curso() {
                                                 </div>
                                             )}
 
-                                            <div className="flex flex-col gap-1">
-
+                                            <div className="flex flex-col gap-0.5">
                                                 {temPromocao && (
-                                                    <span className="line-through text-sm text-gray-500">
+                                                    <span className="line-through text-xs text-gray-500">
                                                         {`R$ ${curso.preco.toFixed(2)}`}
                                                     </span>
                                                 )}
@@ -95,14 +75,12 @@ export default function Curso() {
                                                     )}
                                                 </div>
 
-                                                <span className="text-xs text-gray-600">
+                                                <span className="text-sm text-gray-600">
                                                     {`12x R$ ${parcela} sem juros`}
                                                 </span>
                                             </div>
 
-                                            <p className="mt-1 text-yellow-500 text-sm">
-                                                {`★ ${estrelas}`}
-                                            </p>
+                                            <p className="text-sm text-yellow-500">★ 5</p>
 
                                             <h2 className="mt-2 font-semibold">{curso.nome}</h2>
                                         </div>

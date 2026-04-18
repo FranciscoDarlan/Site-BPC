@@ -7,18 +7,18 @@ export default function Conteudo() {
     const sobre = dadosSobre.conteudo[0]
 
     return (
-        <section className="w-full py-10 flex justify-center">
+        <section className="w-full py-5 md:py-10 flex justify-center">
             <div className="w-full max-w-7xl px-4 md:px-10 flex flex-col items-center">
 
                 <div className="p-2 flex items-center flex-col text-center gap-1 mb-6">
-                    <h2 className="text-2xl md:text-4xl uppercase font-black text-gray-800">
-                        {dadosSobre.titulo}
+                    <h2 className="text-3xl uppercase font-black text-gray-800">
+                        CURSO PROFISSIONALIZANTE BOMBEIRO CIVIL
                     </h2>
 
                     <div className="h-1 w-20 bg-[#bc2c2d] rounded-full mb-2"></div>
 
-                    <p className="text-base md:text-lg font-medium text-[#bc2c2d]">
-                        {dadosSobre.paragrafo}
+                    <p className="text-base font-medium text-[#bc2c2d]">
+                        Conheça o Curso Profissionalizante em Bombeiro Civil
                     </p>
                 </div>
 
@@ -44,7 +44,7 @@ export default function Conteudo() {
                     </div>
 
                     <div className="flex-1 w-full flex justify-center">
-                        <img className="w-full max-w-95 h-auto rounded-2xl shadow-2xl object-cover" src={sobre.imagem} alt="BPC Treinamentos" />
+                        <img className="w-full max-w-85 h-auto rounded-lg object-cover rotate-355" src={sobre.imagem} alt="FORMADOS" />
                     </div>
                 </div>
             </div>

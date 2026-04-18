@@ -1,17 +1,15 @@
 {
-    "titulo": "CURSO PROFISSIONALIZANTE BOMBEIRO CIVIL",
-    "paragrafo": "Conheça o Curso Profissionalizante em Bombeiro Civil",
+    "matricula": "https://chat.whatsapp.com/HRbTvEkKlaa9KOBgVWlwAd",
     "conteudo": [
         {
             "texto": "Seja um profissional em salvar vidas! O Bombeiro Civil é o profissional responsável pelos planos de emergência e gestão de riscos onde atua. O Bombeiro Civil atua em empresas, shows e eventos e fica responsável pela gestão dos riscos e situações com potencial de gerar uma emergência. Desenvolva na prática as atividades do dia-a-dia do Bombeiro Civil.",
             "imagem": "/sobre/Formados.png"
         }
     ],
-    "matricula": "https://chat.whatsapp.com/HRbTvEkKlaa9KOBgVWlwAd",
     "perguntas": [
         {
-            "pergunta": "1",
-            "resposta": "1"
+            "pergunta": "PERGUNTA 1",
+            "resposta": "RESPOSTA 1"
         }
     ]
 }

@@ -8,7 +8,7 @@ import Footer from "../../componetes/footer/footer";
 
 export default function Curso() {
     const { slug } = useParams()
-    const todosCursos = dadosCursos.flatMap(secao => secao.cursos)
+    const todosCursos = dadosCursos
     const curso = todosCursos.find(c => c.slug === slug)
 
     useEffect(() => {
@@ -26,7 +26,6 @@ export default function Curso() {
     const precoFinal = temPromocao ? curso.promocao.valor : curso.preco;
     const descontoPercentual = temPromocao ? Math.round(100 - (precoFinal * 100) / precoOriginal) : 0;
     const parcela = (precoFinal / 12).toFixed(2)
-    const estrelas = localStorage.getItem(`estrelas-${slug}`)
 
     const compartilhar = () => {
         navigator.share ? navigator.share({ title: curso.nome, url: window.location.href }) : navigator.clipboard.writeText(window.location.href)
@@ -41,20 +40,14 @@ export default function Curso() {
 
                     <div className="max-w-sm">
                         <div className="flex text-yellow-400 text-lg">
-                            <span className="mr-1">{estrelas}</span>
-
-                            {Array.from({ length: 5 }).map((_, i) => (
-                                <span key={i}>
-                                    {`${i < estrelas ? "★" : "☆"}`}
-                                </span>
-                            ))}
+                            <span className="mr-1">5 ★★★★★</span>
                         </div>
 
                         <h1 className="text-3xl font-bold mt-2">
                             {curso.nome}
                         </h1>
 
-                        {curso.vendido && (
+                        {curso.maisVendido && (
                             <div className="mt-2 inline-block bg-[#f67734] text-white text-xs font-bold px-2 py-1 rounded">
                                 Mais vendido
                             </div>
@@ -67,11 +60,11 @@ export default function Curso() {
 
                     <div className="md:max-w-md w-full">
                         <div className="relative">
-                            {curso.imagem?.length > 0 && (
-                                <img src={curso.imagem[0]} alt={curso.nome} className="w-full h-60 object-contain" />
+                            {curso.imagem && (
+                                <img src={curso.imagem} alt={curso.nome} className="w-full h-60 object-contain" />
                             )}
 
-                            <button onClick={compartilhar} className="cursor-pointer absolute top-2 right-2 bg-black/40 rounded-full p-1 shadow" title="Compartilhar">
+                            <button onClick={compartilhar} className="cursor-pointer absolute top-3 right-3 bg-black/40 rounded-full p-1" title="Compartilhar">
                                 🔗
                             </button>
                         </div>
@@ -101,7 +94,7 @@ export default function Curso() {
                                 {`12x R$ ${parcela} sem juros`}
                             </p>
 
-                            <button className="mt-5">
+                            <button className="mt-7">
                                 <a href={curso.whatsapp} target="_blank" className="w-full h-full bg-black text-white px-4 py-2 rounded-md" >
                                     Comprar pelo WhatsApp
                                 </a>

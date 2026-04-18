@@ -1,16 +1,37 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-import { linkExterno, localizacao, login, zap } from "../../../config/imagem";
+import { linkExterno, localizacao, login, zap, imgLogout, logo } from "../../../config/imagem";
 
 import dadosSocias from "../../../data/social.json";
 import dadosSobre from "../../../data/sobre.json";
 
 export default function ConteudoHeader() {
     const data = dadosSocias
+    const navigate = useNavigate()
 
+    const [user, setUser] = useState(null)
     const [localAtual, setLocalAtual] = useState(0)
     const [mostrarTodos, setMostrarTodos] = useState(false)
+
+    useEffect(() => {
+        const logadoUser = localStorage.getItem("user")
+
+        if (logadoUser) {
+            setUser(JSON.parse(logadoUser))
+        }
+    }, [])
+
+    const Logout = () => {
+        localStorage.removeItem("user");
+        setUser(null);
+
+        window.location.href = "/";
+    }
+
+    const Login = () => {
+        navigate("/login")
+    }
 
     useEffect(() => {
         const intervalo = setInterval(() => {
@@ -63,7 +84,8 @@ export default function ConteudoHeader() {
                 </div>
 
                 <div className="flex flex-none justify-center px-4">
-                    <h1 className="text-2xl md:text-4xl uppercase font-black tracking-tighter text-[#bc2c2d] select-none">
+                    <h1 className="flex flex-row items-center gap-1 text-2xl md:text-4xl uppercase font-black tracking-tighter text-[#bc2c2d] select-none">
+                        <img className="h-10" src={logo} alt="logo" />
                         BPC
                     </h1>
                 </div>
@@ -83,9 +105,19 @@ export default function ConteudoHeader() {
                             <img className="h-7 w-7 md:h-8 md:w-8" src={zap} alt="contato" />
                         </a>
 
-                        <button className="cursor-pointer hover:opacity-80 transition-opacity p-0.5 border-2 border-transparent hover:border-red-100 rounded-full">
-                            <img className="h-9 w-9 bg-gray-50 rounded-full object-cover" src={login} alt="login" />
-                        </button>
+                        <div className="flex items-center gap-4">
+                            {user ? (
+                                <div className="flex items-center gap-3">
+                                    <button type="button" onClick={Logout} className="cursor-pointer hover:opacity-80 transition-opacity p-0.5 border-2 border-transparent hover:border-red-100 rounded-full" >
+                                        <img className="h-9 w-9 p-2 bg-gray-50 rounded-full object-cover" src={imgLogout} alt="logout" />
+                                    </button>
+                                </div>
+                            ) : (
+                                <button type="button" onClick={Login} className="cursor-pointer hover:opacity-80 transition-opacity p-0.5 border-2 border-transparent hover:border-blue-100 rounded-full" >
+                                    <img className="h-9 w-9 bg-gray-50 rounded-full object-cover" src={login} alt="login" />
+                                </button>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
