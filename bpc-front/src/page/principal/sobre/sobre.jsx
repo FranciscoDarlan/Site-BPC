@@ -1,10 +1,11 @@
-import dadosSobre from "../../../data/sobre.json";
+import { AppContext } from "../../../context/AppContext";
+import { useContext } from "react";
 import Perguntas from "../../../componetes/perguntas/perguntas";
 
-import { zap } from "../../../config/imagem";
+import { zap, logo } from "../../../config/imagem";
 
 export default function Conteudo() {
-    const sobre = dadosSobre.conteudo[0]
+    const { data, loading } = useContext(AppContext);
 
     return (
         <section className="w-full py-5 md:py-10 flex justify-center">
@@ -26,25 +27,37 @@ export default function Conteudo() {
 
                     <div className="flex-1">
                         <p className="text-gray-700 leading-relaxed text-base md:text-lg mb-6">
-                            {sobre.texto}
+                            Seja um profissional em salvar vidas! O Bombeiro Civil é o profissional responsável pelos planos de emergência e gestão de riscos onde atua. O Bombeiro Civil atua em empresas, shows e eventos e fica responsável pela gestão dos riscos e situações com potencial de gerar uma emergência. Desenvolva na prática as atividades do dia-a-dia do Bombeiro Civil.
                         </p>
 
-                        <button className="group cursor-pointer bg-[#40c351] hover:bg-[#34a843] text-white rounded-lg transition-all shadow-lg hover:shadow-xl active:scale-95 border-none outline-none">
-                            <a href={dadosSobre.matricula} target="_blank" rel="noreferrer" className="flex gap-3 flex-row items-center px-6 py-3">
-                                <img className="h-8 w-8" src={zap} alt="whatsApp" />
-                                <span className="text-lg font-bold">Matricule-se pelo WhatsApp</span>
-                            </a>
-                        </button>
+                        {loading ? (
+                            <div>
+                                <div className="p-6"></div>
+                            </div>
+                        ) : (
+                            <button className="group cursor-pointer bg-[#40c351] hover:bg-[#34a843] text-white rounded-lg transition-all shadow-lg hover:shadow-xl active:scale-95 border-none outline-none">
+                                <a href={data?.matricula} target="_blank" rel="noreferrer" className="flex gap-3 flex-row items-center px-6 py-3">
+                                    <img className="h-8 w-8" src={zap} alt="whatsApp" />
+                                    <span className="text-lg font-bold">Matricule-se pelo WhatsApp</span>
+                                </a>
+                            </button>
+                        )}
 
                         <div className="mt-8 w-full">
-                            {dadosSobre.perguntas && (
-                                <Perguntas items={dadosSobre.perguntas} />
+                            {loading ? (
+                                <div className="space-y-0.5">
+                                    <div className="h-9 bg-gray-600 animate-pulse"></div>
+                                    <div className="h-9 bg-gray-600 animate-pulse"></div>
+                                    <div className="h-9 bg-gray-600 animate-pulse"></div>
+                                </div>
+                            ) : (
+                                data?.perguntas && <Perguntas items={data.perguntas} />
                             )}
                         </div>
                     </div>
 
                     <div className="flex-1 w-full flex justify-center">
-                        <img className="w-full max-w-85 h-auto rounded-lg object-cover rotate-355" src={sobre.imagem} alt="FORMADOS" />
+                        <img className="w-full max-w-70 h-auto rounded-lg object-cover" src={logo} alt="FORMADOS" />
                     </div>
                 </div>
             </div>

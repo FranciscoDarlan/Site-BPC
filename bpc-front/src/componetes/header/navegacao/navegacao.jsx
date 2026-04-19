@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
-
-import dadosSocias from "../../../data/social.json";
+import { useState, useEffect, useContext } from "react";
+import { AppContext } from "../../../context/AppContext";
 
 export default function Nav() {
     const [mostrarTodos, setMostrarTodos] = useState(false)
+    const { data, loading } = useContext(AppContext);
 
     const linksNav = [
         { name: "Início", to: "/", type: "internal" },
@@ -64,12 +64,16 @@ export default function Nav() {
                                 <p className="text-xs text-gray-400 mb-4 uppercase tracking-widest">Siga-nos</p>
 
                                 <div className="grid grid-cols-2 gap-3">
-                                    {dadosSocias.rede.map((social, index) => (
-                                        <a key={index} href={social.url} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-[10px] font-bold text-gray-700 bg-gray-50 p-2 rounded-lg hover:bg-gray-100 truncate">
-                                            <img className="h-5 w-5 shrink-0" src={social.icon} alt={social.nome} />
-                                            <span className="truncate">{social.nome}</span>
-                                        </a>
-                                    ))}
+                                    {loading ? (
+                                        <div></div>
+                                    ) : (
+                                        data?.rede?.map((social, index) => (
+                                            <a key={index} href={social.url} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-[10px] font-bold text-gray-700 bg-gray-50 p-2 rounded-lg hover:bg-gray-100 truncate">
+                                                <img className="h-5 w-5 shrink-0" src={social.icon} alt={social.nome} />
+                                                <span className="truncate">{social.nome}</span>
+                                            </a>
+                                        ))
+                                    )}
                                 </div>
                             </div>
                         </div>

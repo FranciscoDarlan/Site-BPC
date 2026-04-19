@@ -1,16 +1,16 @@
 [
     {
-        "nome": "NOME PRODUTO",
+        "nome": "NOME PRODUTO NR-18ash8fyhisahuihguiveheaeugvfaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
         "slug": "produto-1",
-        "sobre": "Esse e o produto 1",
+        "sobre": "Esse e o psdgagnfkanghkfnbhkgnfkahbneflroduto aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa1",
         "imagem": "/cursos/curso/cursoTeste.png",
         "maisVendido": true,
         "preco": 99.99,
         "promocao": {
             "ativa": true,
-            "valor": 50.90
+            "valor": 1060.90
         },
-        "whatsapp": ""
+        "whatsapp": "abc"
     },
     {
         "nome": "NOME PRODUTO 2",
@@ -23,6 +23,6 @@
             "ativa": true,
             "valor": 30.90
         },
-        "whatsapp": ""
+        "whatsapp": "abc"
     }
 ]

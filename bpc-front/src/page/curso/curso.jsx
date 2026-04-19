@@ -1,21 +1,46 @@
 import { useParams, Navigate } from "react-router-dom";
-import { useEffect } from "react";
-
-import dadosCursos from "../../data/cursos.json";
+import { useState, useEffect } from "react";
 
 import Header from "../../componetes/header/header";
 import Footer from "../../componetes/footer/footer";
+import { gifCarregando } from "../../config/imagem";
 
 export default function Curso() {
     const { slug } = useParams()
-    const todosCursos = dadosCursos
-    const curso = todosCursos.find(c => c.slug === slug)
+    const [curso, setCurso] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        fetch(`/api/cursos/curso?slug=${slug}`).then(res => { return res.json(); })
+            .then(data => {
+                setCurso(data);
+                setLoading(false);
+            })
+            .catch(err => {
+                if (err) {
+                    console.error("Erro ao buscar curso:", err);
+                    return <Navigate to={"/404"} />
+                }
+            });
+    }, [slug]);
 
     useEffect(() => {
         if (curso) {
             document.title = curso.nome
         }
     }, [curso])
+
+    if (loading) {
+        if (loading) {
+            document.title = "Carregando..."
+        }
+
+        return (
+            <div className="flex justify-center mt-15">
+                <img src={gifCarregando} alt="Carregando dados do curso..." />
+            </div>
+        )
+    }
 
     if (!curso) {
         return <Navigate to={"/404"} />
@@ -39,13 +64,13 @@ export default function Curso() {
                 <div className="flex flex-col md:flex-row gap-10 justify-center">
 
                     <div className="max-w-sm">
-                        <div className="flex text-yellow-400 text-lg">
-                            <span className="mr-1">5 ★★★★★</span>
-                        </div>
+                        <p className="flex text-yellow-400 text-lg">
+                            5 ★★★★★
+                        </p>
 
-                        <h1 className="text-3xl font-bold mt-2">
+                        <p className="text-3xl font-bold mt-2 wrap-break-word leading-tight">
                             {curso.nome}
-                        </h1>
+                        </p>
 
                         {curso.maisVendido && (
                             <div className="mt-2 inline-block bg-[#f67734] text-white text-xs font-bold px-2 py-1 rounded">
@@ -53,7 +78,7 @@ export default function Curso() {
                             </div>
                         )}
 
-                        <p className="mt-4 text-gray-600">
+                        <p className="mt-4 text-gray-600 text-base leading-relaxed wrap-break-word">
                             {curso.sobre}
                         </p>
                     </div>
@@ -69,7 +94,7 @@ export default function Curso() {
                             </button>
                         </div>
 
-                        <div className="px-4 py-2">
+                        <div className="px-2 md:px-4 py-2">
                             <div className="mt-4">
                                 {temPromocao && (
                                     <p className="text-sm text-gray-500 line-through">
