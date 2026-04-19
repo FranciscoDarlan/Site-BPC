@@ -1,27 +1,27 @@
 [
     {
-        "nome": "NOME PRODUTO NR-18ash8fyhisahuihguiveheaeugvfaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "nome": "NOME 1",
         "slug": "produto-1",
-        "sobre": "Esse e o psdgagnfkanghkfnbhkgnfkahbneflroduto aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa1",
+        "sobre": "1",
         "imagem": "/cursos/curso/cursoTeste.png",
         "maisVendido": true,
         "preco": 99.99,
         "promocao": {
             "ativa": true,
-            "valor": 1060.90
+            "valor": 0
         },
         "whatsapp": "abc"
     },
     {
-        "nome": "NOME PRODUTO 2",
+        "nome": "NOME 2",
         "slug": "produto-2",
-        "sobre": "Esse e o produto 2",
+        "sobre": "2",
         "imagem": "/cursos/curso/cursoTeste2.png",
-        "maisVendido": true,
-        "preco": 999.99,
+        "maisVendido": false,
+        "preco": 99.99,
         "promocao": {
-            "ativa": true,
-            "valor": 30.90
+            "ativa": false,
+            "valor": 0
         },
         "whatsapp": "abc"
     }

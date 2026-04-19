@@ -6,9 +6,7 @@ import { linkExterno, localizacao, login, zap, imgLogout, logo } from "../../../
 
 export default function ConteudoHeader() {
     const navigate = useNavigate()
-
     const { data, loading } = useContext(AppContext);
-
     const [user, setUser] = useState(null)
     const [localAtual, setLocalAtual] = useState(0)
     const [mostrarTodos, setMostrarTodos] = useState(false)
@@ -24,6 +22,11 @@ export default function ConteudoHeader() {
 
         return () => clearInterval(intervalo)
     }, [data?.localidade])
+
+
+    const irlogin = () => {
+        navigate("/login")
+    }
 
     if (loading || !data) return (
         <div className="h-19">
@@ -110,7 +113,7 @@ export default function ConteudoHeader() {
                         </a>
 
                         <div className="flex items-center gap-4">
-                            <button type="button" className="cursor-pointer hover:opacity-80 transition-opacity p-0.5 border-2 border-transparent hover:border-blue-100 rounded-full" >
+                            <button onClick={irlogin} type="button" className="cursor-pointer hover:opacity-80 transition-opacity p-0.5 border-2 border-transparent hover:border-blue-100 rounded-full" >
                                 <img className="h-9 w-9 bg-gray-50 rounded-full object-cover" src={login} alt="login" />
                             </button>
                         </div>
