@@ -1,7 +1,7 @@
 {
-  "name": "bpc-front",
+  "name": "bpc",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,6 +13,7 @@
     "@tailwindcss/vite": "^4.1.18",
     "bcrypt": "^6.0.0",
     "dotenv": "^17.3.1",
+    "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.3.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",

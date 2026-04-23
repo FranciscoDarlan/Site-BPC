@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Perguntas({ items }) {
+export default function Perguntas({ items }) {
     const [aberta, setAberta] = useState(null)
 
     const toggle = (index) => {
@@ -30,5 +30,3 @@ function Perguntas({ items }) {
         </div>
     )
 }
-
-export default Perguntas
