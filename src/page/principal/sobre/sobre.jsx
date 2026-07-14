@@ -1,7 +1,5 @@
-import { AppContext } from "../../../context/AppContext";
-import { useContext, useState } from "react";
-import { zap, logo } from "../../../config/imagem";
-import { perguntas } from "../../../config/perguntas";
+import { useState } from "react";
+import { matricula, perguntas } from "../../../config/dados";
 
 function Perguntas({ items }) {
     const [aberta, setAberta] = useState(null)
@@ -35,8 +33,6 @@ function Perguntas({ items }) {
 }
 
 export default function Conteudo() {
-    const { data, loading } = useContext(AppContext);
-
     return (
         <section className="w-full py-5 md:py-10 flex justify-center">
             <div className="w-full max-w-7xl px-4 md:px-10 flex flex-col items-center">
@@ -45,7 +41,7 @@ export default function Conteudo() {
                         CURSO PROFISSIONALIZANTE BOMBEIRO CIVIL
                     </h2>
 
-                    <div className="h-1 w-20 bg-[#bc2c2d] rounded-full mb-2"></div>
+                    <div className="h-1 w-20 bg-[#bc2c2d] rounded-full mb-2" />
 
                     <p className="text-base font-medium text-[#bc2c2d]">
                         Conheça o Curso Profissionalizante em Bombeiro Civil
@@ -58,26 +54,20 @@ export default function Conteudo() {
                             Seja um profissional em salvar vidas! O Bombeiro Civil é o profissional responsável pelos planos de emergência e gestão de riscos onde atua. O Bombeiro Civil atua em empresas, shows e eventos e fica responsável pela gestão dos riscos e situações com potencial de gerar uma emergência. Desenvolva na prática as atividades do dia-a-dia do Bombeiro Civil.
                         </p>
 
-                        {loading ? (
-                            <div className="p-7"></div>
-                        ) : (
-                            <button className="group cursor-pointer bg-[#40c351] hover:bg-[#34a843] text-white rounded-lg transition-all shadow-lg hover:shadow-xl active:scale-95 border-none outline-none">
-                                <a href={data?.matricula} target="_blank" rel="noreferrer" className="flex gap-3 flex-row items-center px-6 py-3">
-                                    <img className="h-8 w-8" src={zap} alt="whatsApp" />
-                                    <span className="text-lg font-bold">Matricule-se pelo WhatsApp</span>
-                                </a>
-                            </button>
-                        )}
+                        <a href={matricula} target="_blank" rel="noreferrer" className="bg-[#40c351] hover:bg-[#34a843] rounded-lg text-white flex gap-3 flex-row items-center px-6 py-3">
+                            <img className="h-8 w-8" src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="" />
+                            <span className="text-lg font-bold">Matricule-se pelo WhatsApp</span>
+                        </a>
 
-                        <div className="mt-8 w-full">
-                            {perguntas && perguntas.length > 0 && (
+                        <div className="mt-8">
+                            {true > 0 && (
                                 <Perguntas items={perguntas} />
                             )}
                         </div>
                     </div>
 
                     <div className="flex-1 w-full flex justify-center">
-                        <img className="w-full max-w-70 h-auto rounded-lg object-cover" src={logo} alt="Imagem Principal" />
+                        <img className="w-full max-w-70 h-auto rounded-lg object-cover" src="/formados.png" alt="" />
                     </div>
                 </div>
             </div>

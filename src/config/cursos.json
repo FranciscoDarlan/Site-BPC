@@ -1,0 +1,122 @@
+[
+  {
+    "nome": "Curso de APH",
+    "slug": "curso-de-aph",
+    "sobre": "Treinamento essencial de Atendimento Pré-Hospitalar.",
+    "imagem": "/cursos/logoAphcurso.jpg",
+    "preco": 180,
+    "promocao": {
+      "ativa": false,
+      "valor": 0
+    },
+    "whatsapp": ""
+  },
+  {
+    "nome": "Curso de BPC",
+    "slug": "curso-de-bpc",
+    "sobre": "Treinamento focado em Bombeiro Profissional Civil.",
+    "imagem": "/cursos/logobpccurso.png",
+    "preco": 350,
+    "promocao": {
+      "ativa": false,
+      "valor": 0
+    },
+    "whatsapp": ""
+  },
+  {
+    "nome": "Curso NR-33",
+    "slug": "curso-nr-33",
+    "sobre": "Segurança e saúde nos trabalhos em espaços confinados.",
+    "imagem": "/cursos/logonr-33curso.png",
+    "preco": 280,
+    "promocao": {
+      "ativa": false,
+      "valor": 0
+    },
+    "whatsapp": ""
+  },
+  {
+    "nome": "Curso NR-10",
+    "slug": "curso-nr-10",
+    "sobre": "Segurança em instalações e serviços em eletricidade.",
+    "imagem": "/cursos/logonr10.png",
+    "preco": 250,
+    "promocao": {
+      "ativa": false,
+      "valor": 0
+    },
+    "whatsapp": ""
+  },
+  {
+    "nome": "Curso NR-12",
+    "slug": "curso-nr-12",
+    "sobre": "Segurança no trabalho em máquinas e equipamentos.",
+    "imagem": "/cursos/logonr12curso.png",
+    "preco": 150,
+    "promocao": {
+      "ativa": false,
+      "valor": 99
+    },
+    "whatsapp": ""
+  },
+  {
+    "nome": "Curso NR-18",
+    "slug": "curso-nr-18",
+    "sobre": "Segurança e saúde no trabalho na indústria da construção.",
+    "imagem": "/cursos/logonr18curso.png",
+    "preco": 120,
+    "promocao": {
+      "ativa": false,
+      "valor": 0
+    },
+    "whatsapp": ""
+  },
+  {
+    "nome": "Curso NR-20",
+    "slug": "curso-nr-20",
+    "sobre": "Segurança e saúde no trabalho com inflamáveis e combustíveis.",
+    "imagem": "/cursos/logonr20curso.png",
+    "preco": 220,
+    "promocao": {
+      "ativa": false,
+      "valor": 160
+    },
+    "whatsapp": ""
+  },
+  {
+    "nome": "Curso NR-23",
+    "slug": "curso-nr-23",
+    "sobre": "Proteção e combate a incêndios.",
+    "imagem": "/cursos/logonr23curso.png",
+    "preco": 110,
+    "promocao": {
+      "ativa": false,
+      "valor": 0
+    },
+    "whatsapp": ""
+  },
+  {
+    "nome": "Curso NR-6",
+    "slug": "curso-nr-6",
+    "sobre": "Treinamento sobre Equipamentos de Proteção Individual (EPI).",
+    "imagem": "/cursos/logonr6.jpg",
+    "preco": 90,
+    "promocao": {
+      "ativa": false,
+      "valor": 65
+    },
+    "whatsapp": ""
+  },
+  {
+    "nome": "Curso NR-35",
+    "slug": "curso-nr-35",
+    "sobre": "Segurança e saúde no trabalho em altura.",
+    "imagem": "/cursos/NR35curso.png",
+    "preco": 190,
+    "promocao": {
+      "ativa": false,
+      "valor": 0
+    },
+    "whatsapp": ""
+  }
+]

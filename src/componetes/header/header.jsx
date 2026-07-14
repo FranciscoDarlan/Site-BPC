@@ -1,6 +1,3 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-
 import Conteudo from "./Conteudo/Conteudo.jsx";
 import Navegacao from "./navegacao/navegacao";
 
@@ -12,7 +9,7 @@ export default function Header() {
                 <Navegacao />
             </header>
 
-            <div className="h-33 md:h-32"></div>
+            <div className="h-32" />
         </>
     )
 }
